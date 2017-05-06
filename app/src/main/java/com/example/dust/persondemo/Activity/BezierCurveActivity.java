@@ -1,25 +1,28 @@
 package com.example.dust.persondemo.Activity;
 
-import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.view.View;
 
 import com.example.dust.persondemo.R;
+import com.example.dust.persondemo.bezier.LoveLayout;
 
-public class DesignDetialActivity extends AppCompatActivity {
+public class BezierCurveActivity extends AppCompatActivity {
+
+    private Toolbar toolbar3;
+    private LoveLayout loveLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_design_detial);
+        setContentView(R.layout.activity_bezier_curve);
+        toolbar3 =(Toolbar) findViewById(R.id.toolbar3);
+        toolbar3.setTitle("仿直播动画");
 
-        CollapsingToolbarLayout collToolBar = (CollapsingToolbarLayout) findViewById(R.id.coll_toolbar);
 
-        Toolbar toolbar = (Toolbar)findViewById(R.id.toolbar2);
-
-        setSupportActionBar(toolbar);
+        setSupportActionBar(toolbar3);
 
         android.support.v7.app.ActionBar actionBar = getSupportActionBar();
         if(actionBar!=null) {
@@ -27,9 +30,26 @@ public class DesignDetialActivity extends AppCompatActivity {
             actionBar.setDisplayHomeAsUpEnabled(true);
         }
 
-        collToolBar.setTitle("详情页面");
+
+          /** 点击事件**/
+        findViewById(R.id.tv_onclick).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                loveLayout.addLove();
+            }
+        });
+
+        loveLayout= (LoveLayout) findViewById(R.id.love_layout);
+
+
 
     }
+
+
+
+
+
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {

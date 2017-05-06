@@ -231,6 +231,18 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        /**　　　贝塞尔 页面　　**/
+        TextView tv8 = (TextView) findViewById(R.id.sample_text8);
+        tv8.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //播放器的实现页面
+                Intent intent = new Intent(MainActivity.this, BezierCurveActivity.class);
+                startActivity(intent);
+
+            }
+        });
+
 
 
 
@@ -253,7 +265,7 @@ public class MainActivity extends AppCompatActivity {
 
         switch (item.getItemId()) {
             case android.R.id.home:
-                finish();
+//                finish();
                 break;
         }
         return super.onOptionsItemSelected(item);

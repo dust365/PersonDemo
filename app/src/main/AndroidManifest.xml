@@ -21,7 +21,8 @@
         </activity>
         <activity android:name=".Activity.NotificationActivity" />
         <activity android:name=".Activity.MediaPlayerActivity" />
-        <activity android:name=".Activity.DesignDetialActivity"/>
+        <activity android:name=".Activity.DesignDetialActivity" />
+        <activity android:name=".Activity.BezierCurveActivity"></activity>
     </application>
 
 </manifest>

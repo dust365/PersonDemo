@@ -12,7 +12,9 @@
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar_main"
         android:layout_width="match_parent"
-        android:layout_height="?actionBarSize">
+        android:layout_height="?actionBarSize"
+        android:background="@color/colorPrimary"
+        >
 
 
 
@@ -80,5 +82,14 @@
         android:gravity="center"
         android:text="toolbar可折叠" />
 
+
+
+    <TextView
+        android:id="@+id/sample_text8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:gravity="center"
+        android:text="贝塞尔曲线" />
 
 </LinearLayout>
