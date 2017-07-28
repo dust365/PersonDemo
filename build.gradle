@@ -5,7 +5,7 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.3.1'
+        classpath 'com.android.tools.build:gradle:2.3.3'
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
@@ -21,3 +21,43 @@ allprojects {
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+
+//为自己的测试用例
+task customTask1 {
+
+    doFirst {
+
+        println 'customTask1:doFirst'
+
+    }
+
+    doLast {
+
+        println  'customTask1:doSecond'
+
+    }
+
+}
+
+//创建一个新的任务  通过  tasks
+
+tasks.create("customTask2"){
+
+    doFirst {
+
+        println 'customTask1:doFirst'
+
+    }
+
+    doLast {
+
+        println  'customTask1:doSecond'
+
+    }
+
+
+}
+
+
+
+
