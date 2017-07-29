@@ -22,41 +22,302 @@ task clean(type: Delete) {
     delete rootProject.buildDir
 }
 
-//为自己的测试用例
+//  gradle 的测试用例  by   dust   2017-7-29
+
+//  1.为自己的测试用例
 task customTask1 {
 
+
+    description '演示任务1'
+
     doFirst {
 
         println 'customTask1:doFirst'
-
+        println "测试任务1,doFirst"
     }
 
     doLast {
 
-        println  'customTask1:doSecond'
+        println 'customTask1:doSecond'
 
     }
 
 }
 
-//创建一个新的任务  通过  tasks
+//    2.创建一个新的任务  通过  tasks
 
-tasks.create("customTask2"){
+tasks.create("customTask2") {
+
+    description '演示任务2g'
 
     doFirst {
 
         println 'customTask1:doFirst'
+        println "测试任务2,doFirst"
+
 
     }
 
     doLast {
 
-        println  'customTask1:doSecond'
+        println 'customTask1:doSecond'
 
     }
 
 
 }
+
+//  3.  控制任务的执行开关  不需要执行时返回false  如果 关闭  输出  SKIPPED
+
+
+customTask1 {}.enabled = true
+
+//  4.任务的依赖  执行顺序和依赖性顺序无关
+
+task customTask3 {
+
+    dependsOn customTask2, customTask1
+
+    description '演示任务3,依赖任务1'
+
+    doFirst {
+
+        println 'customTask1:doFirst'
+        println "测试任务3,doFirst"
+    }
+
+
+}
+//  5.自定义属性   自定义属性有广泛的作用域  可以通过moudle名称来调用
+
+//    ext.name='dust'
+//    ext.age=27
+
+ext {
+
+    ext.name = 'dust'
+    ext.age = 27
+
+
+}
+
+task customTask4 {
+
+
+    description 'customTask4,自定义属性'
+
+    doFirst {
+
+        println 'customTask4:doFirst'
+        println "测试任务4,doFirst  ${name}"
+        println "测试任务4,doFirst  ${age}"
+    }
+
+
+}
+//6.循环迭代  groovy  的语法
+
+
+task customTask5  {
+
+
+
+
+
+        10.times { print "$it" }
+
+
+}
+
+//  7.  默认任务
+
+
+//defaultTasks 'customTask5','customTask4'
+
+
+
+
+//8.参与java代码的运算
+
+task  customTask6  {
+
+    //a++是先参加程序的运行再+1，而++a则是先+1再参加程序的运行。减的同理   运算符前后的问题
+
+
+    int a =3;
+    int b = 4;
+
+//    int  c=a++;
+//    int  d=b--;
+
+    int  a1=a++;
+
+    //到这里执行前a=3 运算后 a+1=4    故 a1=3 a=4
+    int  b1=b--;
+   //到这里执行前b=4运算后 b-1=3    故 b1=4   b=3
+
+    println "a  = "+a
+    println "b = "+b
+//    println "c  = "+c
+//    println "d  = "+d
+
+    println "a1  = "+a1
+    println "b1 = "+b1
+
+
+
+}
+
+//9.    演示任务 7
+
+tasks.create("customTask7"){
+
+
+
+    description '演示任务7'
+
+    doFirst {
+
+        println 'customTask1:doFirst'
+        println "第二题  ----------------------------"
+
+        int a = 3;
+        int b = 4;
+
+        int c = ++a;
+        // //到这里执行前a=3 运算后 a+1=4     但前++  先参运算  故  c=4   a=4
+        int d=--b;
+        //到这里执行前b=4  运算后 b-1=3     但前--  先参运算 故 d=3  b=3
+
+        println "a  = "+a
+        println "b = "+b
+        println "c  = "+c
+        println "d  = "+d
+
+
+
+
+    }
+
+    doLast {
+
+
+        println "第三题  ----------------------------"
+
+        int  x = 4;
+
+
+
+        //执行括号1时  应为有括号  优先执行括号内  优先级最高
+        // ***  这个地方错了  因为括号的优先级较高  但是执行括号时  后++ 未执行 故括号内  x =4  执行括号后x=5
+
+
+        //执行括号2时  X上一次的值运算后为 x=5     执行前++ 后   x=6
+
+
+        //执行括号3时  应为有括号  优先执行括号内  优先级最高  因为 x * 10    x=6*10=60
+
+        int  y = (x++) + (++x) + (x * 10 )
+
+
+
+
+
+        //结果 y = 5+6+60=71
+
+
+          println "y  = "+y
+
+
+
+
+    }
+
+
+
+
+}
+
+
+//10  演示任务10
+
+task  customTask8  {
+
+
+
+    println "第四题  ----------------------------"
+
+
+
+    int a = 10;
+    int b = 10;
+    int c = 10;
+
+
+
+    //到这里执行前a=10 运算后 a=10        故  a=10  b=11
+    a = b++;
+
+
+
+
+   //到这里执行前a=10 运算后 a=9     先参运算  故  a=9  c=9
+    c = --a;
+
+
+
+
+
+    //到这里执行前a=9  b=10 运算后 a=10   b=10   先参运算  故  a=10   b=10
+    b = ++a;
+
+
+
+
+    //到这里执行前a=10  c=9 运算后 a=9  c=8     但前++  先参运算  故  a=9  c=8
+    a = c--;
+
+
+
+    println "a  = "+a
+    println "b = "+b
+    println "c  = "+c
+
+
+
+
+    //a=9    b=10    c=8
+
+
+
+}
+
+
+
+
+
+task  customTask9  {
+
+   System.out.println "第五题  ----------------------------"
+
+    //我开始觉得 应该是 97  和 98   结果呢  a  a1
+
+    System.out.println('a')
+    System.out.println('a'+1)
+
+    println "第六题  ----------------------------"
+
+    System.out. println("hello"+'a'+1)
+    System.out.println('a'+1+"hello")
+
+    //gradlew -q  customTask9
+
+
+}
+
+
+
+
 
 
 
