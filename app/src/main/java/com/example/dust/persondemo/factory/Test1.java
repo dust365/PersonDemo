@@ -18,6 +18,13 @@ class Test1{
     System.out. println("hello"+'a'+1);
     System.out.println('a'+1+"hello");
 
+
+//     Type type = new TypeToken<List<T>>() {
+//     }.getType();
+//     return gson.fromJson(result, type);
+
+
+
  	
 	
 }

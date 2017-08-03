@@ -224,7 +224,7 @@ public class MainActivity extends AppCompatActivity {
         tv7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //播放器的实现页面
+
                 Intent intent = new Intent(MainActivity.this, DesignDetialActivity.class);
                 startActivity(intent);
 
@@ -236,12 +236,50 @@ public class MainActivity extends AppCompatActivity {
         tv8.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //播放器的实现页面
+
                 Intent intent = new Intent(MainActivity.this, BezierCurveActivity.class);
                 startActivity(intent);
 
             }
         });
+
+
+
+        /**　　　带刷新的recycleView 页面　　**/
+
+        TextView tv9 = (TextView) findViewById(R.id.sample_text9);
+        tv9.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(MainActivity.this, RcycleViewActivity.class);
+                startActivity(intent);
+
+            }
+        });
+
+
+
+        /**　　　卸载指定包的apk  　　**/
+
+        TextView tv10 = (TextView) findViewById(R.id.sample_text10);
+        tv10.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                //通过程序的包名创建URI
+                Uri packageURI = Uri.parse("package:com.piccfs.lossassessment");
+                 //创建Intent意图
+                Intent intent = new Intent(Intent.ACTION_DELETE, packageURI);
+                //执行卸载程序
+                startActivity(intent);
+
+
+
+            }
+        });
+
+
 
 
 

@@ -83,13 +83,36 @@
         android:text="toolbar可折叠" />
 
 
-
     <TextView
         android:id="@+id/sample_text8"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="10dp"
         android:gravity="center"
+        android:padding="10dp"
         android:text="贝塞尔曲线" />
+
+
+
+
+
+    <TextView
+        android:id="@+id/sample_text9"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="带刷新的recycleView" />
+
+
+
+
+    <TextView
+        android:id="@+id/sample_text10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="卸载指定包的apk" />
+
 
 </LinearLayout>

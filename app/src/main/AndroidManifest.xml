@@ -6,6 +6,27 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.CAMERA" />
 
+
+
+
+
+  <!--    微信相关权限   start  -->
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+    <!--    微信相关权限   end -->
+
+
+    <!-- 卸载 安装权限-->
+    <uses-permission android:name="android.permission.DELETE_PACKAGES"/>
+    <uses-permission android:name="android.permission.INSTALL_PACKAGES"/>
+
+
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -20,9 +41,18 @@
             </intent-filter>
         </activity>
         <activity android:name=".Activity.NotificationActivity" />
+
         <activity android:name=".Activity.MediaPlayerActivity" />
+
         <activity android:name=".Activity.DesignDetialActivity" />
-        <activity android:name=".Activity.BezierCurveActivity"></activity>
+
+
+        <activity android:name=".Activity.BezierCurveActivity"/>
+
+        <activity android:name=".Activity.RcycleViewActivity"/>
+
+
+
     </application>
 
 </manifest>
