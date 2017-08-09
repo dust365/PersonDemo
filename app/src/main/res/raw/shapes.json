@@ -1,0 +1,392 @@
+[
+  {
+    "position": "(50,23)",
+    "center": "(110,45)",
+    "color": "CCFF9673",
+    "image": [
+      "part1",
+      "part1_most"
+    ],
+    "name": "左前门把手"
+  },
+  {
+    "position": "(83,78)",
+    "center": "(105,100)",
+    "color": "ccff4e4e",
+    "image": [
+      "part3",
+      "part3_most"
+    ],
+    "name": "左前反光镜"
+  },
+  {
+    "position": "(64,151)",
+    "center": "(150,200)",
+    "color": "cc8c0000",
+    "image": [
+      "part5",
+      "part5_most"
+    ],
+    "name": "左前叶子板"
+  },
+  {
+    "position": "(13,305)",
+    "center": "(40,400)",
+    "color": "CC69008C",
+    "image": [
+      "part6",
+      "part6_most"
+    ],
+    "name": "左下边梁"
+  },
+  {
+    "position": "(15,197)",
+    "center": "(35,250)",
+    "color": "ccffbfbf",
+    "image": [
+      "part4",
+      "part4_most"
+    ],
+    "name": "左前轮胎"
+  },
+  {
+    "position": "(13,71)",
+    "center": "(25,100)",
+    "color": "ff8c4600",
+    "image": [
+      "part2",
+      "part2_most"
+    ],
+    "name": "左前门饰条"
+  },
+  {
+    "position": "(15,554)",
+    "center": "(35,600)",
+    "color": "ccffefbf",
+    "image": [
+      "part4",
+      "part4_most"
+    ],
+    "name": "左后轮胎"
+  },
+  {
+    "position": "(15,660)",
+    "center": "(50,700)",
+    "color": "ffffd24d",
+    "image": [
+      "part2",
+      "part2_most"
+    ],
+    "name": "左后门饰条"
+  },
+  {
+    "position": "(27,790)",
+    "center": "(70,810)",
+    "color": "ccffff26",
+    "image": [
+      "part13",
+      "part13_most"
+    ],
+    "name": "左后门把手"
+  },
+  {
+    "position": "(67,312)",
+    "center": "(125,350)",
+    "color": "ccff5d26",
+    "image": [
+      "part7",
+      "part7_most"
+    ],
+    "name": "左前车门"
+  },
+  {
+    "position": "(67,414)",
+    "center": "(130,435)",
+    "color": "ccda6d00",
+    "image": [
+      "part8",
+      "part8_most"
+    ],
+    "name": "左B柱"
+  },
+  {
+    "position": "(67,464)",
+    "center": "(115,500)",
+    "color": "cc8c4600",
+    "image": [
+      "part10",
+      "part10_most"
+    ],
+    "name": "左后车门"
+  },
+  {
+    "position": "(78,574)",
+    "center": "(150,650)",
+    "color": "ccffdc73",
+    "image": [
+      "part12",
+      "part12_most"
+    ],
+    "name": "左后叶子板"
+  },
+  {
+    "position": "(189,78)",
+    "center": "(250,100)",
+    "color": "cc2db200",
+    "image": [
+      "part14",
+      "part14_most"
+    ],
+    "name": "左前保险杠"
+  },
+  {
+    "position": "(182,126)",
+    "center": "(210,155)",
+    "color": "cc36da00",
+    "image": [
+      "part16",
+      "part16_most"
+    ],
+    "name": "前中网"
+  },
+  {
+    "position": "(180,164)",
+    "center": "(288,216)",
+    "color": "cc00ff00",
+    "image": [
+      "part17",
+      "part17_most"
+    ],
+    "name": "机盖"
+  },
+  {
+    "position": "(154,294)",
+    "center": "(215,335)",
+    "color": "ccb9ff73",
+    "image": [
+      "part18",
+      "part18_most"
+    ],
+    "name": "左A柱"
+  },
+  {
+    "position": "(232,369)",
+    "center": "(325,500)",
+    "color": "cc304000",
+    "image": [
+      "part20",
+      "part20_most"
+    ],
+    "name": "车顶"
+  },
+  {
+    "position": "(171,515)",
+    "center": "(225,550)",
+    "color": "ccb28500",
+    "image": [
+      "part11",
+      "part11_most"
+    ],
+    "name": "左C柱"
+  },
+  {
+    "position": "(180,538)",
+    "center": "(300,601)",
+    "color": "cc698c00",
+    "image": [
+      "part23",
+      "part23_most"
+    ],
+    "name": "后尾盖"
+  },
+  {
+    "position": "(180,668)",
+    "center": "(225,710)",
+    "color": "cca3da00",
+    "image": [
+      "part24",
+      "part24_most"
+    ],
+    "name": "后尾盖垂直面"
+  },
+  {
+    "position": "(178,725)",
+    "center": "(250,760)",
+    "color": "cce5ff99",
+    "image": [
+      "part25",
+      "part25_most"
+    ],
+    "name": "左后保险杠"
+  },
+  {
+    "position": "(320,78)",
+    "center": "(365,100)",
+    "color": "cc7bff4e",
+    "image": [
+      "part15",
+      "part15_most"
+    ],
+    "name": "右前保险杠"
+  },
+  {
+    "position": "(392,294)",
+    "center": "(425,350)",
+    "color": "cc59b200",
+    "image": [
+      "part19",
+      "part19_most"
+    ],
+    "name": "右A柱"
+  },
+  {
+    "position": "(392,516)",
+    "center": "(425,550)",
+    "color": "cc0085b2",
+    "image": [
+      "part22",
+      "part22_most"
+    ],
+    "name": "右C柱"
+  },
+  {
+    "position": "(320,725)",
+    "center": "(375,750)",
+    "color": "ccd2ff4e",
+    "image": [
+      "part26",
+      "part26_most"
+    ],
+    "name": "右后保险杠"
+  },
+  {
+    "position": "(472,23)",
+    "center": "(515,48)",
+    "color": "cc99ff99",
+    "image": [
+      "part27",
+      "part27_most"
+    ],
+    "name": "右前门把手"
+  },
+  {
+    "position": "(467,78)",
+    "center": "(525,100)",
+    "color": "cc00ff80",
+    "image": [
+      "part28",
+      "part28_most"
+    ],
+    "name": "右前反光镜"
+  },
+  {
+    "position": "(432,150)",
+    "center": "(500,200)",
+    "color": "cc00ffbf",
+    "image": [
+      "part29",
+      "part29_most"
+    ],
+    "name": "右前叶子板"
+  },
+  {
+    "position": "(418,310)",
+    "center": "(500,350)",
+    "color": "cc99ffff",
+    "image": [
+      "part30",
+      "part30_most"
+    ],
+    "name": "右前车门"
+  },
+  {
+    "position": "(418,415)",
+    "center": "(500,425)",
+    "color": "cc008c8c",
+    "image": [
+      "part8",
+      "part8_most"
+    ],
+    "name": "右B柱"
+  },
+  {
+    "position": "(418,468)",
+    "center": "(500,500)",
+    "color": "cc26c9ff",
+    "image": [
+      "part31",
+      "part31_most"
+    ],
+    "name": "右后车门"
+  },
+  {
+    "position": "(444,574)",
+    "center": "(500,650)",
+    "color": "cc4ea6ff",
+    "image": [
+      "part33",
+      "part33_most"
+    ],
+    "name": "右后叶子板"
+  },
+  {
+    "position": "(496,789)",
+    "center": "(515,811)",
+    "color": "cc0000b2",
+    "image": [
+      "part34",
+      "part34_most"
+    ],
+    "name": "右后门把手"
+  },
+  {
+    "position": "(574,70)",
+    "center": "(580,140)",
+    "color": "ff400040",
+    "image": [
+      "part2",
+      "part2_most"
+    ],
+    "name": "右前门饰条"
+  },
+  {
+    "position": "(532,198)",
+    "center": "(577,240)",
+    "color": "cce599ff",
+    "image": [
+      "part4",
+      "part4_most"
+    ],
+    "name": "右前轮胎"
+  },
+  {
+    "position": "(575,305)",
+    "center": "(600,400)",
+    "color": "cc0040ff",
+    "image": [
+      "part6",
+      "part6_most"
+    ],
+    "name": "右下边梁"
+  },
+  {
+    "position": "(573,662)",
+    "center": "(600,700)",
+    "color": "FF660000",
+    "image": [
+      "part2",
+      "part2_most"
+    ],
+    "name": "右后门饰条"
+  },
+  {
+    "position": "(534,554)",
+    "center": "(555,604)",
+    "color": "ccbf00ff",
+    "image": [
+      "part4",
+      "part4_most"
+    ],
+    "name": "右后轮胎"
+  }
+]
