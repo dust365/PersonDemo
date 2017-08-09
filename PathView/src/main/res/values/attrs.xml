@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <declare-styleable name="PathView">
+        <attr name="gravity">
+            <enum name="center" value="0" />
+            <enum name="center_vertical" value="1" />
+            <enum name="center_horizontal" value="2" />
+            <enum name="top" value="3" />
+            <enum name="bottom" value="4" />
+            <enum name="left" value="5" />
+            <enum name="right" value="6" />
+        </attr>
+        <attr name="boundary_color" format="color"/>
+        <attr name="click_color" format="color"/>
+    </declare-styleable>
+</resources>
