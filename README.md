@@ -9,4 +9,4 @@
 * 3.grovy学习的一些 基础写法
 * 4.svg 构造地图等
 * 5.一些设计模式的自我练习
- ![image](https://github.com/dust365/PersonDemo/blob/master/app/src/main/res/raw/map.gif)
+ * ![image](https://github.com/dust365/PersonDemo/blob/master/app/src/main/res/raw/map.gif)
