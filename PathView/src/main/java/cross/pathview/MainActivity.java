@@ -47,6 +47,8 @@ public class MainActivity extends Activity {
         });
 
 
+
+
         pathview.addOnAreaClick(new PathView.OnAreaClick() {
             @Override
             public void OnClick(PathArea pathArea) {

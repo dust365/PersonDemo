@@ -83,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
 
             //女娲第一次造人，试验性质，少造点，火候不足，缺陷产品
                 System.out.println("------------造出的第一批人是这样的：白人 -----------------");
-                        Human whiteHuman = HumanFactory.createHuman(WhiteHuman.class);
+                 Human whiteHuman = HumanFactory.createHuman(WhiteHuman.class);
                 whiteHuman.cry();
                 whiteHuman.laugh();
                 whiteHuman.talk();
