@@ -146,6 +146,22 @@
                 android:padding="10dp"
                 android:text="侧滑删除的item" />
 
+            <TextView
+                android:id="@+id/sample_text12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="绘制图形和扇形图" />
+
+
+
+
+
+
+
+
+
 
         </android.support.v7.widget.LinearLayoutCompat>
 

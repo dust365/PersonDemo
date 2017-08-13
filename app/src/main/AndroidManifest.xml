@@ -59,6 +59,15 @@
 
 
 
+       <!-- 绘制 -->
+        <activity android:name=".activity.PaintActivity"/>
+
+
+
+
+
+
+
 
 
 

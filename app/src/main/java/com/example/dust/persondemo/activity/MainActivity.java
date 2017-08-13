@@ -295,6 +295,20 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
+        /**　　　绘制图形 paint  　　**/
+
+        TextView tv12 = (TextView) findViewById(R.id.sample_text12);
+        tv12.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(MainActivity.this, PaintActivity.class);
+                startActivity(intent);
+
+
+            }
+        });
+
 
 
 
