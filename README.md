@@ -19,3 +19,7 @@
 * 7.listView recycleView 侧滑删除效果
 
  ![image](https://github.com/dust365/PersonDemo/blob/master/app/src/main/res/raw/slidingdelete.gif)
+* 8.画笔基础paint和自定义控件百分比饼状图效果
+
+ ![image](https://github.com/dust365/PersonDemo/blob/master/app/src/main/res/raw/shanxing.png)
+
