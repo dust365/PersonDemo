@@ -1,4 +1,4 @@
-package com.example.dust.persondemo.Activity;
+package com.example.dust.persondemo.activity;
 
 import android.app.Notification;
 import android.app.NotificationManager;
@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
 
            /**　　JNI 　测试案例　**/
             TextView tv = (TextView) findViewById(R.id.sample_text);
-            tv.setText(stringFromJNI());
+//            tv.setText(stringFromJNI()+"");
 
 
         /**　　　播放器　　**/
@@ -279,6 +279,20 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
+        /**　　　侧滑删除  　　**/
+
+        TextView tv11 = (TextView) findViewById(R.id.sample_text11);
+        tv11.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(MainActivity.this, SlidingActivity.class);
+                startActivity(intent);
+
+
+            }
+        });
 
 
 

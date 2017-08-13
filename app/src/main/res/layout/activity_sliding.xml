@@ -1,0 +1,36 @@
+<com.example.dust.persondemo.view.SlidingItemMenuLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+    android:background="@android:color/darker_gray"
+>
+
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:background="#ffff"
+    android:text="今天晚上一起吃饭吧?"
+    android:gravity="center_vertical"/>
+
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:background="@android:color/holo_orange_light"
+        android:text="标为未读"
+        android:textColor="@android:color/white"
+        android:gravity="center_vertical"
+        />
+
+
+<TextView
+    android:background="#ff0000"
+    android:layout_width="100dp"
+    android:layout_height="80dp"
+    android:text="删除"
+    android:textColor="@android:color/white"
+    android:gravity="center_vertical"
+    />
+
+</com.example.dust.persondemo.view.SlidingItemMenuLayout>

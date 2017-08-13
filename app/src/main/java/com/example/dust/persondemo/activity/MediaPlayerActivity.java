@@ -1,4 +1,4 @@
-package com.example.dust.persondemo.Activity;
+package com.example.dust.persondemo.activity;
 
 import android.Manifest;
 import android.content.pm.PackageManager;
@@ -12,7 +12,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.dust.persondemo.R;

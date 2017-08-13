@@ -1,13 +1,11 @@
-package com.example.dust.persondemo.Activity;
+package com.example.dust.persondemo.activity;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
-import android.view.View;
 
 import com.example.dust.persondemo.R;
-import com.example.dust.persondemo.bezier.LoveLayout;
 import com.scwang.smartrefresh.layout.api.RefreshLayout;
 import com.scwang.smartrefresh.layout.listener.OnLoadmoreListener;
 import com.scwang.smartrefresh.layout.listener.OnRefreshListener;

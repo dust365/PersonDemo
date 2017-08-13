@@ -1,7 +1,9 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 23
+
+
+    compileSdkVersion 24
     buildToolsVersion '25.0.3'
     defaultConfig {
         applicationId "cross.com.pathview"

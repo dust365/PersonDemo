@@ -1,4 +1,4 @@
-package com.example.dust.persondemo.Activity;
+package com.example.dust.persondemo.activity;
 
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v7.app.AppCompatActivity;
