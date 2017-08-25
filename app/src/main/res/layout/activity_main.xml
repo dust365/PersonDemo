@@ -26,10 +26,9 @@
         android:layout_height="match_parent">
 
 
-
         <android.support.v7.widget.LinearLayoutCompat
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:orientation="vertical"
             app:divider="@color/colorAccent"
             app:dividerPadding="5dp"
@@ -38,104 +37,92 @@
             >
 
 
+            <TextView
+                android:id="@+id/sample_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Hello World!" />
 
 
+            <TextView
+                android:id="@+id/sample_text2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="播放器" />
+
+            <TextView
+                android:id="@+id/sample_text3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="测试工厂模式" />
 
 
-    <TextView
-        android:id="@+id/sample_text"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:padding="10dp"
-        android:text="Hello World!" />
+            <TextView
+                android:id="@+id/sample_text4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="测试写文件持久化" />
 
 
+            <TextView
+                android:id="@+id/sample_text5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="测试读文件" />
 
-    <TextView
-        android:id="@+id/sample_text2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:padding="10dp"
-        android:text="播放器" />
-
-    <TextView
-        android:id="@+id/sample_text3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="10dp"
-        android:gravity="center"
-        android:text="测试工厂模式" />
-
-
-    <TextView
-        android:id="@+id/sample_text4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="10dp"
-        android:gravity="center"
-        android:text="测试写文件持久化" />
+            <TextView
+                android:id="@+id/sample_text6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="测试通知栏" />
 
 
-    <TextView
-        android:id="@+id/sample_text5"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="10dp"
-        android:gravity="center"
-        android:text="测试读文件" />
-
-    <TextView
-        android:id="@+id/sample_text6"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="10dp"
-        android:gravity="center"
-        android:text="测试通知栏" />
+            <TextView
+                android:id="@+id/sample_text7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="toolbar可折叠" />
 
 
-
-    <TextView
-        android:id="@+id/sample_text7"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="10dp"
-        android:gravity="center"
-        android:text="toolbar可折叠" />
-
-
-    <TextView
-        android:id="@+id/sample_text8"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:padding="10dp"
-        android:text="贝塞尔曲线" />
+            <TextView
+                android:id="@+id/sample_text8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="贝塞尔曲线" />
 
 
+            <TextView
+                android:id="@+id/sample_text9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="带刷新的recycleView" />
 
 
-
-    <TextView
-        android:id="@+id/sample_text9"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:padding="10dp"
-        android:text="带刷新的recycleView" />
-
-
-
-
-    <TextView
-        android:id="@+id/sample_text10"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:padding="10dp"
-        android:text="卸载指定包的apk" />
-
+            <TextView
+                android:id="@+id/sample_text10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="卸载指定包的apk" />
 
 
             <TextView
@@ -154,11 +141,21 @@
                 android:padding="10dp"
                 android:text="绘制图形和扇形图" />
 
+            <TextView
+                android:id="@+id/sample_text13"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="热修复快跑跑跑跑跑跑" />
 
-
-
-
-
+            <TextView
+                android:id="@+id/sample_text14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="热修复" />
 
 
 

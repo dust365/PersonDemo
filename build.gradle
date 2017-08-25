@@ -7,6 +7,9 @@
 buildscript {
     repositories {
         jcenter()
+
+
+
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:2.3.3'
@@ -19,13 +22,26 @@ buildscript {
         classpath "com.tencent.bugly:tinker-support:1.0.8"
 
 
+
+
+
     }
 }
 
 allprojects {
     repositories {
         jcenter()
+
+
+        //maven  仓库为阿里热修复做准备
+        maven {
+            url "http://maven.aliyun.com/nexus/content/repositories/releases"
+        }
+
     }
+
+
+
 }
 
 task clean(type: Delete) {

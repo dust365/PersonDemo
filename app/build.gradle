@@ -77,6 +77,8 @@ dependencies {
 
 
 
+       //阿里热修复shophix
+       compile 'com.aliyun.ams:alicloud-android-hotfix:3.1.0'
 
 
 
