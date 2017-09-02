@@ -14,6 +14,21 @@ public class PathArea {
     private double strokeAlpha; //边框透明度
     private String strokeColor;//边框颜色
     private int strokeWidth;//边框宽度
+
+
+
+    private int state=0;//默认的0 没选中   1是钣金  2 是喷漆
+
+
+    private String fillColor1="#d4237a"; //钣金的填充体颜色（红色）
+
+
+    private String fillColor2="#9eea6a"; //漆的填充体颜色(浅绿色色)
+
+
+
+
+
     public String getAreaName() {
         return AreaName;
     }
@@ -68,5 +83,30 @@ public class PathArea {
 
     public void setStrokeWidth(int strokeWidth) {
         this.strokeWidth = strokeWidth;
+    }
+
+
+    public int getState() {
+        return state;
+    }
+
+    public void setState(int state) {
+        this.state = state;
+    }
+
+    public String getFillColor1() {
+        return fillColor1;
+    }
+
+    public void setFillColor1(String fillColor1) {
+        this.fillColor1 = fillColor1;
+    }
+
+    public String getFillColor2() {
+        return fillColor2;
+    }
+
+    public void setFillColor2(String fillColor2) {
+        this.fillColor2 = fillColor2;
     }
 }

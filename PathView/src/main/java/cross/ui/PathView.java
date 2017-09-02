@@ -83,8 +83,14 @@ public class PathView extends View {
     }
 
     private void init() {
+
+
+         //手势识别
         mGestureDetector = new GestureDetector(getContext(), new Gesturelistener());
-        mScaleGestureDetector = new ScaleGestureDetector(getContext(), new ScaleGestureListener());
+
+
+        //缩放的手势
+//        mScaleGestureDetector = new ScaleGestureDetector(getContext(), new ScaleGestureListener());
         paintArea = new Paint(Paint.ANTI_ALIAS_FLAG);
         paintArea.setStyle(Paint.Style.FILL);
         paintBoundary = new Paint(Paint.ANTI_ALIAS_FLAG);
@@ -108,13 +114,29 @@ public class PathView extends View {
         PathArea area = null;
         for (int i = 0; i < ListData.size(); i++) {
             area = ListData.get(i);
-//            if(isChoose==i){
-//                paintArea.setColor(isClickColor);
-//            }else{
-//            }
+            if(isChoose==i){
+                paintArea.setColor(isClickColor);
+            }else{
+            }
             if (null != area.getFillColor()) {
-                paintArea.setColor(Color.parseColor(area.getFillColor()));
-                paintArea.setAlpha((int) area.getFillAlpha() * 255);
+
+               //标识当前的状态  0  默认  1钣金   2喷漆
+                int state = area.getState();
+
+                if (state==0){
+
+                    paintArea.setColor(Color.parseColor(area.getFillColor()));
+
+                }else if (state==1){
+
+                    paintArea.setColor(Color.parseColor(area.getFillColor1()));
+
+                }else if (state==2){
+
+                    paintArea.setColor(Color.parseColor(area.getFillColor2()));
+                }
+//                paintArea.setColor(Color.parseColor(area.getFillColor()));
+//                paintArea.setAlpha((int) area.getFillAlpha() * 255);
                 canvas.drawPath(area.getPath(), paintArea);
             }
 //            paintBoundary.setColor(boundary_color);
@@ -206,9 +228,12 @@ public class PathView extends View {
     @Override
     public boolean onTouchEvent(MotionEvent event) {
         mGestureDetector.onTouchEvent(event);
-        mScaleGestureDetector.onTouchEvent(event);
+//        mScaleGestureDetector.onTouchEvent(event);
         return true;
     }
+
+
+    //手势识别的监听
 
     private class Gesturelistener implements GestureDetector.OnGestureListener {
 
@@ -230,9 +255,9 @@ public class PathView extends View {
 
         @Override
         public boolean onScroll(MotionEvent motionEvent, MotionEvent motionEvent1, float dx, float dy) {
-            Log.e("TAG", "dx=" + dx + ",dy=" + dy);
-            mScaleMatrix.postTranslate(dx, dy);
-            areaTranslate(-dx, -dy);
+//            Log.e("TAG", "dx=" + dx + ",dy=" + dy);
+//            mScaleMatrix.postTranslate(dx, dy);
+//            areaTranslate(-dx, -dy);
             return false;
         }
 
@@ -245,6 +270,9 @@ public class PathView extends View {
             return false;
         }
     }
+
+
+    //缩放的手势
 
     private class ScaleGestureListener implements ScaleGestureDetector.OnScaleGestureListener {
         @Override
@@ -278,6 +306,8 @@ public class PathView extends View {
         }
     }
 
+
+    //区域的点击事件
     private void AreaOnClick(MotionEvent pMotionEvent) {
         PathArea pathArea = getPathArea((int) pMotionEvent.getX(), (int) pMotionEvent.getY());
         if (pathArea != null && mOnAreaClick != null) {
@@ -292,7 +322,8 @@ public class PathView extends View {
             re.setPath(ListData.get(i).getPath(), new Region((int) (0),
                     (int) (0), (int) (getWidth()), (int) (getHeight())));
             if (re.contains(x, y)) {
-//                invalidate();
+                invalidate();
+                isChoose = i;
                 return ListData.get(i);
             }
         }

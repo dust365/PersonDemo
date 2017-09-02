@@ -26,9 +26,11 @@ import java.util.List;
 import cross.model.PathArea;
 import cross.ui.PathView;
 import cross.xmlanalysis.SAX;
+import view.FollowView;
 
 public class MainActivity extends Activity {
     private PathView pathview;
+    private FollowView fllowView;
     private  AnimationSet animatorSet;
 
     //全部数据
@@ -39,6 +41,7 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         pathview = (PathView) findViewById(R.id.pathView);
+        fllowView = (FollowView) findViewById(R.id.fllow_view);
         pathview.setOnAreaLoadedCallback(new PathView.OnAreaLoadedCallback() {
             @Override
             public void onAreaLoaded() {
@@ -46,29 +49,49 @@ public class MainActivity extends Activity {
             }
         });
 
+        //屏蔽缩放功能
 
+//        pathview.setONT
 
 
         pathview.addOnAreaClick(new PathView.OnAreaClick() {
             @Override
             public void OnClick(PathArea pathArea) {
                 Toast.makeText(MainActivity.this, "点击了：" + pathArea.getAreaName(), Toast.LENGTH_SHORT).show();
-                pathArea.setFillColor("#d4237a");
+
+                int state = pathArea.getState();
+
+
+                switch (state){
+
+                    case  0:
+
+                        pathArea.setState(1);
+                        break;
+                    case 1:
+                        pathArea.setState(2);
+                        break;
+
+                    case 2:
+                        pathArea.setState(0);
+                        break;
+
+
+                    default:
+                        pathArea.setState(0);
+
+
+                }
+
+
+
+//                pathArea.setFillColor("#d4237a");
+//                pathArea.setFillColor("#d4237a");
 //                pathview.notify();
 
 
-                pathview.setListData(pathAreas);
+//                pathview.setListData(pathAreas);
 
-
-//               new Handler().postDelayed(new Runnable() {
-//                   @Override
-//                   public void run() {
-//
-//
-//                       pathview.notifyAll();
-//
-//                   }
-//               },2000);
 
 
 
@@ -89,22 +112,28 @@ public class MainActivity extends Activity {
         animatorSet = new AnimationSet(true);
         animatorSet.addAnimation(upAnimation);
         animatorSet.addAnimation(downAnimation);
-//        pathview.setOnTouchListener(new View.OnTouchListener() {
-//            @Override
-//            public boolean onTouch(View v, MotionEvent event) {
-//                switch (event.getAction()){
-//                    case MotionEvent.ACTION_UP:
-//                        PathArea pathArea = pathview.getPathArea(pathview.getWidth() / 2, pathview.getHeight() / 2);
-//                        if (pathArea!=null){
-//                            Toast.makeText(MainActivity.this,pathArea.getAreaName(), Toast.LENGTH_SHORT).show();
-//
-//                            findViewById(R.id.image).startAnimation(animatorSet);
-//                        }
-//                        break;
-//                }
-//                return false;
-//            }
-//        });
+        pathview.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                switch (event.getAction()){
+                    case MotionEvent.ACTION_UP:
+                        PathArea pathArea = pathview.getPathArea(pathview.getWidth() / 2, pathview.getHeight() / 2);
+                        if (pathArea!=null){
+                            Toast.makeText(MainActivity.this,pathArea.getAreaName(), Toast.LENGTH_SHORT).show();
+
+                            findViewById(R.id.image).startAnimation(animatorSet);
+                        }
+                        break;
+                }
+                return false;
+            }
+        });
+
+
+
+
+
+
     }
 
     private void showArea() {
@@ -121,7 +150,8 @@ public class MainActivity extends Activity {
 //        }
 //        String path = Environment.getExternalStorageDirectory().getPath()+ "/so/shop.xml";
         try {
-            InputStream is = getAssets().open("world.xml");
+//            InputStream is = getAssets().open("world.xml");
+            InputStream is = getAssets().open("test_car2.xml");
             pathAreas = new SAX().readXML(is);
             pathview.setListData(pathAreas);
         } catch (IOException e) {
