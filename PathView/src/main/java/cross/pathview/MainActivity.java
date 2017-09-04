@@ -151,7 +151,11 @@ public class MainActivity extends Activity {
 //        String path = Environment.getExternalStorageDirectory().getPath()+ "/so/shop.xml";
         try {
 //            InputStream is = getAssets().open("world.xml");
-            InputStream is = getAssets().open("test_car2.xml");
+//            InputStream is = getAssets().open("test_car2.xml");
+//            InputStream is = getAssets().open("test_car3.xml");
+//            InputStream is = getAssets().open("car_test4.xml");
+//            InputStream is = getAssets().open("test_car5.xml");
+            InputStream is = getAssets().open("test_car6.xml");
             pathAreas = new SAX().readXML(is);
             pathview.setListData(pathAreas);
         } catch (IOException e) {
