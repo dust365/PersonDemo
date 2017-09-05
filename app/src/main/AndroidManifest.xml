@@ -109,6 +109,20 @@
 
 
 
+        <!-- 自定义控件 -->
+        <activity android:name=".activity.CustomActivity">
+
+            <intent-filter >
+
+                <action android:name="com.example.dust.persondemo"/>
+                <category  android:name="android.intent.category.DEFAULT"/>
+
+
+            </intent-filter>
+
+        </activity>
+
+
 
 
 

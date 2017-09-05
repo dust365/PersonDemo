@@ -23,17 +23,24 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+
 
 
         <android.support.v7.widget.LinearLayoutCompat
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical"
             app:divider="@color/colorAccent"
             app:dividerPadding="5dp"
             app:showDividers="beginning|middle|end"
-
             >
 
 
@@ -42,7 +49,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:padding="10dp"
+                android:padding="5dp"
                 android:text="Hello World!" />
 
 
@@ -51,7 +58,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:padding="10dp"
+                android:padding="5dp"
                 android:text="播放器" />
 
             <TextView
@@ -59,7 +66,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:padding="10dp"
+                android:padding="5dp"
                 android:text="测试工厂模式" />
 
 
@@ -68,7 +75,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:padding="10dp"
+                android:padding="5dp"
                 android:text="测试写文件持久化" />
 
 
@@ -77,7 +84,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:padding="10dp"
+                android:padding="5dp"
                 android:text="测试读文件" />
 
             <TextView
@@ -85,7 +92,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:padding="10dp"
+                android:padding="5dp"
                 android:text="测试通知栏" />
 
 
@@ -94,7 +101,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:padding="10dp"
+                android:padding="5dp"
                 android:text="toolbar可折叠" />
 
 
@@ -103,7 +110,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:padding="10dp"
+                android:padding="5dp"
                 android:text="贝塞尔曲线" />
 
 
@@ -112,7 +119,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:padding="10dp"
+                android:padding="5dp"
                 android:text="带刷新的recycleView" />
 
 
@@ -121,7 +128,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:padding="10dp"
+                android:padding="5dp"
                 android:text="卸载指定包的apk" />
 
 
@@ -130,7 +137,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:padding="10dp"
+                android:padding="5dp"
                 android:text="侧滑删除的item" />
 
             <TextView
@@ -138,7 +145,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:padding="10dp"
+                android:padding="5dp"
                 android:text="绘制图形和扇形图" />
 
             <TextView
@@ -146,7 +153,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:padding="10dp"
+                android:padding="5dp"
                 android:text="热修复快跑跑跑跑跑跑" />
 
             <TextView
@@ -154,13 +161,20 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:padding="10dp"
+                android:padding="5dp"
                 android:text="热修复" />
 
-
+            <TextView
+                android:id="@+id/sample_text15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="自定义控件" />
 
 
         </android.support.v7.widget.LinearLayoutCompat>
+        </LinearLayout>
 
 
     </ScrollView>

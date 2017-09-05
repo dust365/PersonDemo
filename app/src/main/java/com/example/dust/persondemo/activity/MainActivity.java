@@ -311,6 +311,35 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+        /**    热修复相关的业务  13 14  **/
+
+
+        /**    自定义控件  15  **/
+
+        TextView sample_text15 = (TextView) findViewById(R.id.sample_text15);
+        sample_text15.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent();
+                intent.setAction( "com.example.dust.persondemo");
+              //不加下面这行也行，因为intent的这个属性默认值即系Intent.CATEGORY_DEFAULT
+                intent.addCategory(Intent.CATEGORY_DEFAULT);
+                startActivity(intent);
+
+
+            }
+        });
+
+
+
+
+
+
+
+
+
+
 
     }
 

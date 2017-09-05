@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+    <android.support.v7.widget.AppCompatCheckedTextView
+        android:id="@+id/tv_head"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/selector_head_text_background"
+        android:checked="true"
+        android:gravity="center_vertical"
+        android:text="品牌"
+        android:textAlignment="center"
+        android:textColor="@drawable/selector_text_color"
+
+        />
+
+
+    <android.support.v7.widget.AppCompatCheckedTextView
+        android:id="@+id/tv_body"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="￥400"
+        android:gravity="center"
+        android:textColor="@android:color/holo_red_light"
+        android:checked="true"
+        android:textAlignment="center"
+        android:background="@drawable/selector_mid_text_background"
+        />
+
+
+
+
+
+    <android.support.v7.widget.AppCompatCheckedTextView
+        android:id="@+id/tv_foot"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+
+        android:checked="true"
+        android:gravity="center"
+        android:drawableTop= "@drawable/checked"
+
+        android:background="@drawable/selector_foot_text_background"
+        android:textAlignment="center" />
+
+
+    <!-- android:background="@drawable/selector_foot_text_background"-->
+
+
+</LinearLayout>

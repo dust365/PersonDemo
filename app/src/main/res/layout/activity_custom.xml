@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.example.dust.persondemo.view.FromView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:head_button_checkable="true"
+        app:body_button_checkable="true"
+        app:foot_button_checkable="true"
+        app:head_text="品牌"
+        app:body_text="$777"
+        app:foot_text=""
+        >
+    </com.example.dust.persondemo.view.FromView>
+
+
+
+
+
+
+</LinearLayout>
