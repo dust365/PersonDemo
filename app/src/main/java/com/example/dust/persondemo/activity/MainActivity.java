@@ -44,11 +44,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-//    static {
-//        //名字注意，需要跟你的build.gradle ndk节点下面的名字一样
-//        System.loadLibrary("native-lib1");
-//    }
-//        System.loadLibrary("native-lib1");
+
 
         setContentView(R.layout.activity_main);
 
@@ -361,15 +357,15 @@ public class MainActivity extends AppCompatActivity {
 
     }
     /**
-     * A native method that is implemented by the 'native-lib' native library,
-     * which is packaged with this application.
-     */
-    public native String stringFromJNI();
-
-    // Used to load the 'native-lib' library on application startup.
-    static {
-        System.loadLibrary("native-lib1");
-    }
+//     * A native method that is implemented by the 'native-lib' native library,
+//     * which is packaged with this application.
+//     */
+//    public native String stringFromJNI();
+//
+//    // Used to load the 'native-lib' library on application startup.
+//    static {
+//        System.loadLibrary("native-lib1");
+//    }
 
 
 
