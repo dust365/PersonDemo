@@ -23,6 +23,7 @@ import com.example.dust.persondemo.factory.Human;
 import com.example.dust.persondemo.factory.HumanFactory;
 import com.example.dust.persondemo.factory.WhiteHuman;
 import com.example.dust.persondemo.factory.YellowHuman;
+import com.example.dust.persondemo.utils.JNIUtils;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -43,8 +44,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-
-
+//    static {
+//        //名字注意，需要跟你的build.gradle ndk节点下面的名字一样
+//        System.loadLibrary("native-lib1");
+//    }
+//        System.loadLibrary("native-lib1");
 
         setContentView(R.layout.activity_main);
 
@@ -58,8 +62,12 @@ public class MainActivity extends AppCompatActivity {
 
 
            /**　　JNI 　测试案例　**/
-            TextView tv = (TextView) findViewById(R.id.sample_text);
-            tv.setText(stringFromJNI()+"");
+         TextView tv = (TextView) findViewById(R.id.sample_text);
+
+        JNIUtils jniUtils = new JNIUtils();
+//        String stringFromJNI = jniUtils.stringFromJNI();
+        String nameFromJNI = jniUtils.getNameFromJNI();
+        tv.setText(nameFromJNI +"");
 
 
         /**　　　播放器　　**/
@@ -351,13 +359,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-
-
-
-
-
     }
-
     /**
      * A native method that is implemented by the 'native-lib' native library,
      * which is packaged with this application.
@@ -366,8 +368,9 @@ public class MainActivity extends AppCompatActivity {
 
     // Used to load the 'native-lib' library on application startup.
     static {
-        System.loadLibrary("native-lib");
+        System.loadLibrary("native-lib1");
     }
+
 
 
     @Override

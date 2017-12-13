@@ -9,11 +9,21 @@ extern "C" {
 #endif
 /*
  * Class:     com_example_dust_persondemo_utils_JNIUtils
- * Method:    getName
+ * Method:    getNameFromJNI
  * Signature: ()Ljava/lang/String;
  */
-JNIEXPORT jstring JNICALL Java_com_example_dust_persondemo_utils_JNIUtils_getName
-  (JNIEnv *, jobject);
+JNIEXPORT jstring JNICALL Java_com_example_dust_persondemo_utils_JNIUtils_getNameFromJNI
+        (JNIEnv *, jobject);
+
+
+/*
+ * Class:     com_example_dust_persondemo_utils_JNIUtils
+ * Method:    stringFromJNI
+ * Signature: ()Ljava/lang/String;
+ */
+JNIEXPORT jstring JNICALL Java_com_example_dust_persondemo_utils_JNIUtils_stringFromJNI
+        (JNIEnv *, jobject);
+
 
 #ifdef __cplusplus
 }

@@ -20,13 +20,20 @@ add_library( # Sets the name of the library.
              # Provides a relative path to your source file(s).
              # Associated headers in the same location as their source
              # file are automatically included.
-             src/main/cpp/native-lib.cpp )
+             #指定要编译文件路径
+             # src/main/cpp/native-lib.cpp )
+             src/main/cpp/native-lib.cpp src/main/jni/getNameJNI.c )
 
 # Searches for a specified prebuilt library and stores the path as a
 # variable. Because system libraries are included in the search path by
 # default, you only need to specify the name of the public NDK library
 # you want to add. CMake verifies that the library exists before
 # completing its build.
+
+
+#  指定子编译文件的路径
+# add_subdirectory
+
 
 find_library( # Sets the name of the path variable.
               log-lib
