@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
 
            /**　　JNI 　测试案例　**/
             TextView tv = (TextView) findViewById(R.id.sample_text);
-//            tv.setText(stringFromJNI()+"");
+            tv.setText(stringFromJNI()+"");
 
 
         /**　　　播放器　　**/
@@ -332,6 +332,21 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
+        /**    自定义控件语音识别的弹窗  16  **/
+        TextView sample_text16 = (TextView) findViewById(R.id.sample_text16);
+        sample_text16.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+                Intent intent = new Intent(MainActivity.this, VoiceDialogActivity.class);
+                startActivity(intent);
+
+
+
+
+            }
+        });
 
 
 

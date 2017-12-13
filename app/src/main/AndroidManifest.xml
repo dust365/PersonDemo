@@ -123,6 +123,9 @@
         </activity>
 
 
+        <!-- 语音是别的弹窗 -->
+        <activity android:name=".activity.VoiceDialogActivity"/>
+
 
 
 

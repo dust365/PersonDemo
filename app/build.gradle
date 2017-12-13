@@ -12,9 +12,12 @@ android {
         applicationId "com.example.dust.persondemo"
         minSdkVersion 15
         targetSdkVersion 25
-        versionCode 1
-        versionName "1.0"
+        versionCode 2
+        versionName "1.0.2"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+
+        // 使用Cmake工具
         externalNativeBuild {
 
             cmake {
@@ -38,6 +41,8 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    // 配置CMakeLists.txt路径
     externalNativeBuild {
         cmake {
             path "CMakeLists.txt"
