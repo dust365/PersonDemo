@@ -6,6 +6,19 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+
+
+
+        <!-- 返回键的颜色 -->
+        <item name="colorControlNormal">@color/white</item>
+
+
+      <!--  <item name="actionMenuTextColor">@android:color/white</item>-->
+
+        <!-- toolbar 文字的颜色 -->
+        <!--toolbar title, menu text color-->
+        <item name="android:textColorPrimary">@color/white</item>
+
     </style>
 
 </resources>

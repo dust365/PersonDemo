@@ -1,17 +1,25 @@
 package com.example.dust.persondemo.activity;
 
+import android.app.AlertDialog;
 import android.app.Notification;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.net.Uri;
+import android.support.annotation.NonNull;
+import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.NavigationView;
+import android.support.v4.app.NotificationCompat;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.app.NotificationCompat;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
@@ -23,6 +31,7 @@ import com.example.dust.persondemo.factory.Human;
 import com.example.dust.persondemo.factory.HumanFactory;
 import com.example.dust.persondemo.factory.WhiteHuman;
 import com.example.dust.persondemo.factory.YellowHuman;
+import com.example.dust.persondemo.utils.CircularAnimUtil;
 import com.example.dust.persondemo.utils.JNIUtils;
 
 import java.io.BufferedReader;
@@ -35,9 +44,13 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 
+import static java.security.AccessController.getContext;
+
 public class MainActivity extends AppCompatActivity {
 
     public static final String TAG = MainActivity.class.getName();
+    private DrawerLayout mDrawerLayout;
+    private ActionBarDrawerToggle mDrawerToggle;
 
 
     @Override
@@ -55,6 +68,17 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar_main);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+
+        mDrawerLayout = (DrawerLayout) findViewById(R.id.drawerLayout);
+
+        mDrawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout, toolbar_main, R.string.drawer_open, R.string.drawer_close);
+        mDrawerToggle.syncState();
+        mDrawerLayout.addDrawerListener(mDrawerToggle);
+
+
+        //初始化左侧边栏目
+        initNavigationView();
 
 
            /**　　JNI 　测试案例　**/
@@ -354,8 +378,93 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+         FloatingActionButton floatingActionButton = (FloatingActionButton) findViewById(R.id.floatingActionButton);
+        floatingActionButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+                /**
+                 * 带动画特效的启动
+                 */
+                CircularAnimUtil.startActivity(MainActivity.this, DesignDetialActivity.class, v, R.color.colorAccent);
+
+
+            }
+        });
+
+
+
+
+
 
     }
+
+    private void initNavigationView() {
+
+
+        NavigationView navigationView = findViewById(R.id.navigation_view);
+
+
+        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+
+                String message = "功能暂未开通";
+                switch (menuItem.getItemId()) {
+
+                    // 修改密码
+                    case R.id.change_password:
+
+
+                        break;
+
+                    // 关于我们
+                    case R.id.about_system:
+
+                        break;
+
+                    // 清除缓存
+                    case R.id.action_feed_back:
+
+
+
+                        break;
+
+                    // 登出
+                    case R.id.logout:
+                        AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+                        builder.setTitle("提示")//
+                                .setMessage("确定退出该账号?")//
+                                .setPositiveButton("确定", new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialogInterface, int whitch) {
+
+                                    }
+                                }).setNegativeButton("取消", new DialogInterface.OnClickListener() {
+
+                            @Override
+                            public void onClick(DialogInterface arg0, int arg1) {
+                            }
+                        }).create();
+                        builder.show();
+
+
+
+                        break;
+
+                }
+
+//                menuItem.setChecked(true);
+                mDrawerLayout.closeDrawers();
+                return false;
+            }
+        });
+
+
+
+    }
+
     /**
 //     * A native method that is implemented by the 'native-lib' native library,
 //     * which is packaged with this application.

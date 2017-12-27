@@ -10,6 +10,10 @@ buildscript {
 
 
 
+        maven {
+            url 'https://maven.google.com/'
+            name 'Google'
+        }
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:2.3.3'
@@ -38,6 +42,10 @@ allprojects {
             url "http://maven.aliyun.com/nexus/content/repositories/releases"
         }
 
+        maven {
+            url 'https://maven.google.com/'
+            name 'Google'
+        }
     }
 
 

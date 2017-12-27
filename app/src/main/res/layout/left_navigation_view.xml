@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="start"
+    android:background="@color/transparent"
+    android:orientation="vertical"
+    tools:showIn="@layout/activity_main">
+
+    <!--android:layout_gravity="start"属性使这部分作为侧滑部分-->
+    <!--一定要放在下面！！！关于控件的层次性如果不知道的同学去百度！哦不去谷歌-->
+    <!--菜单项-->
+
+    <android.support.design.widget.NavigationView
+        android:id="@+id/navigation_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:layout_gravity="left"
+        android:fitsSystemWindows="true"
+        app:headerLayout="@layout/header_layout"
+        app:menu="@menu/left_menu">
+
+    </android.support.design.widget.NavigationView>
+
+</LinearLayout>

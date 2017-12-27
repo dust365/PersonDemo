@@ -3,4 +3,29 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+
+
+    <!-- 黑色 -->
+    <color name="transparent">#0000</color>
+
+
+    <!-- 白色 -->
+    <color name="white">#ffffff</color>
+
+
+
+    <!-- 黄色 -->
+    <color name="yellow">#ffff00</color>
+
+
+    <!-- 碧绿色 -->
+    <color name="chartreuse">#7fff00</color>
+
+
+    <!-- 暗橄榄绿 -->
+    <color name="indigo">#4b0082</color>
+
+
+    <color name="black">#000000</color>
+
 </resources>

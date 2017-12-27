@@ -21,6 +21,16 @@
     </android.support.v7.widget.Toolbar>
 
 
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawerLayout"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/toolbar_main"
+        android:layout_height="match_parent"
+        >
+
+
+
+
     <ScrollView
         android:layout_below="@+id/toolbar_main"
         android:layout_width="match_parent"
@@ -194,15 +204,7 @@
     </ScrollView>
 
 
-   <android.support.design.widget.FloatingActionButton
-        android:layout_width="56dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:layout_margin="18dp"
-        android:layout_height="56dp"
-        android:elevation="6dp"
-       android:stateListAnimator="@anim/fab_raise"
-       />
+
 
    <!-- <ImageButton
         android:layout_width="56dp"
@@ -215,4 +217,29 @@
         />-->
 
 
+
+        <!--   左侧侧滑页面NavigationView-->
+        <include
+            layout="@layout/left_navigation_view"
+            />
+
+
+
+
+    </android.support.v4.widget.DrawerLayout>
+
+
+
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="56dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="18dp"
+        android:layout_height="56dp"
+        android:elevation="6dp"
+        android:stateListAnimator="@anim/fab_raise"
+        />
 </RelativeLayout>

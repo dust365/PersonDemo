@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">PersonDemo</string>
+
+
+    <string name="drawer_open">打开</string>
+    <string name="drawer_close">关闭</string>
+
 </resources>
