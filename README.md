@@ -24,4 +24,25 @@
 * 8.画笔基础paint和自定义控件百分比饼状图效果
 
  ![image](https://github.com/dust365/PersonDemo/blob/master/app/src/main/res/raw/shanxing.png)
+ * 9.RxJava RxPermissions动态申请权限解决权限回调分割代码业务的问题
+ 
 
+  RxPermissions rxPermissions = new RxPermissions(MainActivity.this); // where this is an Activity instance
+                //不区分拒绝  状态权限的申请
+                rxPermissions
+                        .request(Manifest.permission.CAMERA,Manifest.permission.INTERNET)
+                        .subscribe(new Consumer<Boolean>() {
+                         @Override
+                          public void accept(Boolean granted) throws Exception {
+
+                                if (granted) {
+                                 // All requested permissions are granted
+                                  
+                                } else {
+                                    // At least one permission is denied
+                                    Toast.makeText(MainActivity.this, "被拒绝", Toast.LENGTH_SHORT).show();
+                                }
+                            }
+         });
+                        
+ 
