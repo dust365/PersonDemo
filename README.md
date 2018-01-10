@@ -1,4 +1,6 @@
-# PersonDemo 
+# PersonDemo
+
+[![API](https://img.shields.io/badge/API-20%2B-brightgreen.svg?style=flat)](https://android-arsenal.com/api?level=20)
 
 ## 我个人一些测试demo的合集
 
