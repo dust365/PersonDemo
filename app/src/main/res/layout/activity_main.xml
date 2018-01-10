@@ -192,7 +192,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:padding="5dp"
-                android:text="自定义语音识别的dialog"
+                android:text="Rxpermissions和其他"
                 android:textColor="@color/colorAccent"
                 />
 

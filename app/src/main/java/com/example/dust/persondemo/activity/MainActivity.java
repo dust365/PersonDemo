@@ -1,5 +1,6 @@
 package com.example.dust.persondemo.activity;
 
+import android.Manifest;
 import android.app.AlertDialog;
 import android.app.Notification;
 import android.app.NotificationManager;
@@ -33,6 +34,8 @@ import com.example.dust.persondemo.factory.WhiteHuman;
 import com.example.dust.persondemo.factory.YellowHuman;
 import com.example.dust.persondemo.utils.CircularAnimUtil;
 import com.example.dust.persondemo.utils.JNIUtils;
+import com.tbruyelle.rxpermissions2.Permission;
+import com.tbruyelle.rxpermissions2.RxPermissions;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -43,6 +46,8 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
+
+import io.reactivex.functions.Consumer;
 
 import static java.security.AccessController.getContext;
 
@@ -367,14 +372,65 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
 
 
-                Intent intent = new Intent(MainActivity.this, VoiceDialogActivity.class);
-                startActivity(intent);
+                RxPermissions rxPermissions = new RxPermissions(MainActivity.this); // where this is an Activity instance
 
+                //不区分拒绝  状态权限的申请
+                rxPermissions
+                        .request(Manifest.permission.CAMERA,
+                                Manifest.permission.INTERNET)
+                        .subscribe(new Consumer<Boolean>() {
+                            @Override
+                            public void accept(Boolean granted) throws Exception {
 
+                                if (granted) {
+//                                // All requested permissions are granted
 
+                                    Intent intent = new Intent(MainActivity.this, VoiceDialogActivity.class);
+                                    startActivity(intent);
 
+                                } else {
+                                    // At least one permission is denied
+
+                                    Toast.makeText(MainActivity.this, "被拒绝", Toast.LENGTH_SHORT).show();
+                                }
+
+                            }
+                        });
             }
-        });
+
+
+//                rxPermissions
+//                        .requestEachCombined(Manifest.permission.CAMERA,
+//                                Manifest.permission.READ_PHONE_STATE)
+//                        .subscribe(new Consumer<Permission>() {
+//                            @Override
+//                            public void accept(Permission permission) throws Exception {
+//
+//
+//                                if (permission.granted) {
+//                                    // All permissions are granted !
+//                                    //所有权限被同意
+//
+//                                    Toast.makeText(MainActivity.this, "所有权限被同意", Toast.LENGTH_SHORT).show();
+//
+//                                } else if (permission.shouldShowRequestPermissionRationale) {
+//                                    // At least one denied permission without ask never again
+//                                    ////至少有一个被拒绝的权限，而不会再次询问
+//                                    Toast.makeText(MainActivity.this, "被拒绝的权限", Toast.LENGTH_SHORT).show();
+//
+//                                } else {
+//                                    // At least one denied permission with ask never again
+//                                    // Need to go to the settings
+//                                    Toast.makeText(MainActivity.this, "Need to go to the settings", Toast.LENGTH_SHORT).show();
+//                                }
+//                            }
+//
+//                        });
+//
+//                }
+
+            });
+
 
 
 
