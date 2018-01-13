@@ -27,7 +27,7 @@
  * 9.RxJava RxPermissions动态申请权限解决权限回调分割代码业务的问题
  
 
-  RxPermissions rxPermissions = new RxPermissions(MainActivity.this); // where this is an Activity instance
+     RxPermissions rxPermissions = new RxPermissions(MainActivity.this); // where this is an Activity instance
                 //不区分拒绝  状态权限的申请
                 rxPermissions
                         .request(Manifest.permission.CAMERA,Manifest.permission.INTERNET)
