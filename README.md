@@ -24,9 +24,11 @@
 * 8.画笔基础paint和自定义控件百分比饼状图效果
 
  ![image](https://github.com/dust365/PersonDemo/blob/master/app/src/main/res/raw/shanxing.png)
- * 9.RxJava RxPermissions动态申请权限解决权限回调分割代码业务的问题
+ ![GitHub](https://github.com/dust365/PersonDemo/blob/master/app/src/main/res/raw/shanxing.png "GitHub,Social Coding")
  
-
+ * 9.RxJava RxPermissions动态申请权限解决权限回调分割代码业务的问题
+    
+```
      RxPermissions rxPermissions = new RxPermissions(MainActivity.this); // where this is an Activity instance
                 //不区分拒绝  状态权限的申请
                 rxPermissions
@@ -45,4 +47,9 @@
                             }
          });
                         
+ ```
+~~这就是~~
+ 
+ ~~删除线~~
+ 
  
