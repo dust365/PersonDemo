@@ -23,7 +23,6 @@
  ![image](https://github.com/dust365/PersonDemo/blob/master/app/src/main/res/raw/slidingdelete.gif)
 * 8.画笔基础paint和自定义控件百分比饼状图效果
 
- ![image](https://github.com/dust365/PersonDemo/blob/master/app/src/main/res/raw/shanxing.png)
  ![GitHub](https://github.com/dust365/PersonDemo/blob/master/app/src/main/res/raw/shanxing.png "GitHub,Social Coding")
  
  * 9.RxJava RxPermissions动态申请权限解决权限回调分割代码业务的问题
@@ -48,8 +47,8 @@
          });
                         
  ```
-~~这就是~~
+~~过时的方法~~
  
- ~~删除线~~
+ 
  
  
