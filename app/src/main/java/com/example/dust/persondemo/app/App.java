@@ -2,6 +2,7 @@ package com.example.dust.persondemo.app;
 
 import android.app.Application;
 import android.content.Context;
+import android.support.v7.app.AppCompatDelegate;
 
 import com.example.dust.persondemo.R;
 import com.example.dust.persondemo.utils.AppInfo;
@@ -17,6 +18,11 @@ import com.scwang.smartrefresh.layout.header.ClassicsHeader;
 import com.taobao.sophix.PatchStatus;
 import com.taobao.sophix.SophixManager;
 import com.taobao.sophix.listener.PatchLoadStatusListener;
+
+import skin.support.SkinCompatManager;
+import skin.support.app.SkinCardViewInflater;
+import skin.support.constraint.app.SkinConstraintViewInflater;
+import skin.support.design.app.SkinMaterialViewInflater;
 
 
 /**
@@ -65,10 +71,31 @@ public class App extends Application {
         initShopHix();
 
 
+        initSkin();
+
+
     }
 
 
+    //初始化换肤
+    private void initSkin() {
 
+
+        SkinCompatManager.withoutActivity(this)
+//                .addStrategy(new CustomSDCardLoader())          // 自定义加载策略，指定SDCard路径
+                .addInflater(new SkinMaterialViewInflater())    // material design
+                .addInflater(new SkinConstraintViewInflater())  // ConstraintLayout
+                .addInflater(new SkinCardViewInflater())        // CardView v7
+//                .addInflater(new SkinCircleImageViewInflater()) // hdodenhof/CircleImageView
+//                .addInflater(new SkinFlycoTabLayoutInflater())  // H07000223/FlycoTabLayout
+//                .setSkinStatusBarColorEnable(false)             // 关闭状态栏换肤
+//                .setSkinWindowBackgroundEnable(false)           // 关闭windowBackground换肤
+//                .setSkinAllActivityEnable(false)                // true: 默认所有的Activity都换肤; false: 只有实现SkinCompatSupportable接口的Activity换肤
+                .loadSkin();
+        AppCompatDelegate.setCompatVectorFromResourcesEnabled(true);
+
+
+    }
 
 
     //阿里热修复

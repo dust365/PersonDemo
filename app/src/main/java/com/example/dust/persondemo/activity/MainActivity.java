@@ -8,6 +8,8 @@ import android.app.PendingIntent;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.net.Uri;
@@ -46,9 +48,13 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
+import java.util.List;
+import java.util.logging.Logger;
 
 import io.reactivex.functions.Consumer;
+import skin.support.SkinCompatManager;
 
+import static com.tencent.bugly.crashreport.crash.c.i;
 import static java.security.AccessController.getContext;
 
 public class MainActivity extends AppCompatActivity {
@@ -56,6 +62,7 @@ public class MainActivity extends AppCompatActivity {
     public static final String TAG = MainActivity.class.getName();
     private DrawerLayout mDrawerLayout;
     private ActionBarDrawerToggle mDrawerToggle;
+    private boolean isDefultSkin=true;
 
 
     @Override
@@ -300,13 +307,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                //通过程序的包名创建URI
-                Uri packageURI = Uri.parse("package:com.piccfs.lossassessment");
-                 //创建Intent意图
-                Intent intent = new Intent(Intent.ACTION_DELETE, packageURI);
-                //执行卸载程序
+                Intent intent = new Intent(MainActivity.this, RcycleViewActivity.class);
                 startActivity(intent);
-
 
 
             }
@@ -399,6 +401,7 @@ public class MainActivity extends AppCompatActivity {
             }
 
 
+
 //                rxPermissions
 //                        .requestEachCombined(Manifest.permission.CAMERA,
 //                                Manifest.permission.READ_PHONE_STATE)
@@ -434,6 +437,23 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+        /** 传感器    **/
+
+        TextView sample_text17 = (TextView) findViewById(R.id.sample_text17);
+        sample_text17.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+                Intent intent = new Intent(MainActivity.this, SensorActivity.class);
+                startActivity(intent);
+
+
+            }
+        });
+
+
+
          FloatingActionButton floatingActionButton = (FloatingActionButton) findViewById(R.id.floatingActionButton);
         floatingActionButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -461,6 +481,8 @@ public class MainActivity extends AppCompatActivity {
 
         NavigationView navigationView = findViewById(R.id.navigation_view);
 
+        final MenuItem item = navigationView.getMenu().findItem(R.id.switch_skin);
+
 
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -475,8 +497,48 @@ public class MainActivity extends AppCompatActivity {
 
                         break;
 
-                    // 关于我们
-                    case R.id.about_system:
+                    // 换肤
+                    case R.id.switch_skin:
+
+
+                        SkinCompatManager.SkinLoaderListener skinLoaderListener = new SkinCompatManager.SkinLoaderListener() {
+                            @Override
+                            public void onStart() {
+
+                                Log.e(TAG,"onStart()");
+
+                            }
+
+                            @Override
+                            public void onSuccess() {
+
+                                Log.e(TAG,"onSuccess()");
+
+                            }
+
+                            @Override
+                            public void onFailed(String errMsg) {
+
+
+                                Log.e(TAG,"onFailed()"+errMsg);
+
+                            }
+                        };
+
+//                        SkinCompatManager.getInstance().loadSkin("dust_night.skin", skinLoaderListener, SkinCompatManager.SKIN_LOADER_STRATEGY_BUILD_IN);
+                        if (isDefultSkin) {
+//                          SkinCompatManager.getInstance().loadSkin("dust_night.skin", skinLoaderListener, SkinCompatManager.SKIN_LOADER_STRATEGY_ASSETS);
+//                           SkinCompatManager.getInstance().loadSkin("dust.skin", skinLoaderListener, SkinCompatManager.SKIN_LOADER_STRATEGY_ASSETS);
+                           SkinCompatManager.getInstance().loadSkin("night.skin", skinLoaderListener, SkinCompatManager.SKIN_LOADER_STRATEGY_ASSETS);
+                            isDefultSkin=false;
+                        } else {
+                            SkinCompatManager.getInstance().restoreDefaultTheme();
+                            isDefultSkin=true;
+                        }
+
+
+
+
 
                         break;
 

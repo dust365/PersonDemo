@@ -13,7 +13,7 @@
         <item name="colorControlNormal">@color/white</item>
 
 
-      <!--  <item name="actionMenuTextColor">@android:color/white</item>-->
+     <item name="actionMenuTextColor">@android:color/black</item>
 
         <!-- toolbar 文字的颜色 -->
         <!--toolbar title, menu text color-->

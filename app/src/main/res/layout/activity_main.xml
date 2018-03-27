@@ -34,7 +34,9 @@
     <ScrollView
         android:layout_below="@+id/toolbar_main"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="@color/background"
+        >
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -61,6 +63,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:padding="5dp"
+                android:textColor="@color/text_color"
                 android:text="Hello World!" />
 
 
@@ -70,6 +73,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:padding="5dp"
+                android:textColor="@color/text_color"
                 android:text="播放器" />
 
             <TextView
@@ -77,6 +81,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
+                android:textColor="@color/text_color"
                 android:padding="5dp"
                 android:text="测试工厂模式" />
 
@@ -87,6 +92,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:padding="5dp"
+                android:textColor="@color/text_color"
                 android:text="测试写文件持久化" />
 
 
@@ -96,6 +102,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:padding="5dp"
+                android:textColor="@color/text_color"
                 android:text="测试读文件" />
 
             <TextView
@@ -103,6 +110,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
+                android:textColor="@color/text_color"
                 android:padding="5dp"
                 android:text="测试通知栏" />
 
@@ -113,6 +121,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:padding="5dp"
+                android:textColor="@color/text_color"
                 android:text="toolbar可折叠" />
 
 
@@ -122,6 +131,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:padding="5dp"
+                android:textColor="@color/text_color"
                 android:text="贝塞尔曲线" />
 
 
@@ -131,7 +141,8 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:padding="5dp"
-                android:text="带刷新的recycleView" />
+                android:textColor="@color/text_color"
+                android:text="应用列表（支持卸载）" />
 
 
             <TextView
@@ -140,6 +151,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:padding="5dp"
+                android:textColor="@color/text_color"
                 android:text="卸载指定包的apk" />
 
 
@@ -149,6 +161,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:padding="5dp"
+                android:textColor="@color/text_color"
                 android:text="侧滑删除的item" />
 
             <TextView
@@ -157,6 +170,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:padding="5dp"
+                android:textColor="@color/text_color"
                 android:text="绘制图形和扇形图" />
 
             <TextView
@@ -165,6 +179,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:padding="5dp"
+                android:textColor="@color/text_color"
                 android:text="热修复快跑跑跑跑跑跑" />
 
             <TextView
@@ -173,6 +188,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:padding="5dp"
+                android:textColor="@color/text_color"
                 android:text="热修复" />
 
             <TextView
@@ -181,6 +197,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:padding="5dp"
+                android:textColor="@color/text_color"
                 android:text="自定义控件" />
 
 
@@ -193,8 +210,24 @@
                 android:gravity="center"
                 android:padding="5dp"
                 android:text="Rxpermissions和其他"
-                android:textColor="@color/colorAccent"
+                android:textColor="@color/text_color"
+
                 />
+
+
+
+
+            <TextView
+                android:id="@+id/sample_text17"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="传感器"
+                android:textColor="@color/text_color"
+
+                />
+
 
 
         </android.support.v7.widget.LinearLayoutCompat>

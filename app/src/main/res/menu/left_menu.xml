@@ -7,12 +7,17 @@
         android:id="@+id/change_password"
         android:icon="@drawable/ic_launcher"
         android:checked="false"
-        android:title="修改密码"/>
+        android:title="修改密码"
+        />
     <item
-        android:id="@+id/about_system"
+        android:id="@+id/switch_skin"
         android:icon="@drawable/ic_launcher"
         android:checked="false"
-        android:title="关于我们"/>
+        android:title="换肤"/>
+
+
+
+
 
     <item
         android:id="@+id/action_feed_back"

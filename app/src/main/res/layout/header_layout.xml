@@ -3,7 +3,7 @@
     xmlns:tool="http://schemas.android.com/tools"
     android:id="@+id/navigation_view_header"
     android:layout_width="match_parent"
-    android:background="@color/colorAccent"
+    android:background="@color/colorPrimary"
     android:layout_height="170dp">
 
     <ImageView
@@ -27,7 +27,7 @@
             android:id="@+id/tv_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            tool:text="河南风帆总代理"
+            android:text="河南风帆总代理"
             android:padding="2dp"
             android:gravity="center_horizontal"
             android:textColor="@color/white"
@@ -38,7 +38,7 @@
             android:id="@+id/tv_phoneNumber"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            tool:text="13520568290"
+            android:text="13520568290"
             android:padding="2dp"
             android:gravity="center_horizontal"
             android:textColor="@color/white"

@@ -93,6 +93,9 @@ dependencies {
     //RxPermissions  https://github.com/tbruyelle/RxPermissions
     compile 'com.tbruyelle.rxpermissions2:rxpermissions:0.9.5@aar'
 
+    //黄油刀
+    implementation 'com.jakewharton:butterknife:8.8.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
 
 
     //  Bilibili/ijkplayer  播放器
@@ -111,6 +114,15 @@ dependencies {
 //
 //    //# ExoPlayer as IMediaPlayer: optional, experimental
 //    compile 'tv.danmaku.ijk.media:ijkplayer-exo:0.8.4'
+
+
+
+
+    //换肤
+    compile 'skin.support:skin-support:2.2.3'                   // skin-support 基础控件支持
+    compile 'skin.support:skin-support-design:2.2.3'            // skin-support-design material design 控件支持[可选]
+    compile 'skin.support:skin-support-cardview:2.2.3'          // skin-support-cardview CardView 控件支持[可选]
+    compile 'skin.support:skin-support-constraint-layout:2.2.3' // skin-support-constraint-layout ConstraintLayout 控件支持[可选]
 
 
 
