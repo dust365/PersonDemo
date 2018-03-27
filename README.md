@@ -25,7 +25,8 @@
 
  ![GitHub](https://github.com/dust365/PersonDemo/blob/master/app/src/main/res/raw/shanxing.png "GitHub,Social Coding")
  
- *9 夜间模式 
+ * 9 夜间模式 
+ 
   ![image](https://github.com/dust365/PersonDemo/blob/master/app/src/main/res/raw/nightGIF.gif)
 
  
