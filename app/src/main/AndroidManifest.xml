@@ -126,6 +126,8 @@
         <!-- 语音是别的弹窗 -->
         <activity android:name=".activity.VoiceDialogActivity"/>
         <activity android:name=".activity.SensorActivity" />
+        <activity android:name=".activity.SlidingShopDetialsActivity" />
+        <activity android:name=".activity.ScrollShopDetialsActivity" />
 
 
     </application>

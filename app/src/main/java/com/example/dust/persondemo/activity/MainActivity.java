@@ -453,8 +453,42 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
+        /** 上拉翻页商品详情    **/
 
-         FloatingActionButton floatingActionButton = (FloatingActionButton) findViewById(R.id.floatingActionButton);
+        TextView sample_text18 = (TextView) findViewById(R.id.sample_text18);
+        sample_text18.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+                Intent intent = new Intent(MainActivity.this, SlidingShopDetialsActivity.class);
+                startActivity(intent);
+
+
+            }
+        });
+
+        /** scrollView商品详情    **/
+
+        TextView sample_text19 = (TextView) findViewById(R.id.sample_text19);
+        sample_text19.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+                Intent intent = new Intent(MainActivity.this, ScrollShopDetialsActivity.class);
+                startActivity(intent);
+
+
+            }
+        });
+
+
+
+
+
+
+        FloatingActionButton floatingActionButton = (FloatingActionButton) findViewById(R.id.floatingActionButton);
         floatingActionButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -468,6 +502,9 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
+
+//
 
 
 

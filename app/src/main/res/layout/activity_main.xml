@@ -152,7 +152,7 @@
                 android:gravity="center"
                 android:padding="5dp"
                 android:textColor="@color/text_color"
-                android:text="卸载指定包的apk" />
+                android:text="站位" />
 
 
             <TextView
@@ -224,6 +224,30 @@
                 android:gravity="center"
                 android:padding="5dp"
                 android:text="传感器"
+                android:textColor="@color/text_color"
+
+                />
+
+
+
+            <TextView
+                android:id="@+id/sample_text18"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="上拉翻页商品详情ByrecycleView"
+                android:textColor="@color/text_color"
+
+                />
+
+            <TextView
+                android:id="@+id/sample_text19"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="ScrollView商品详情"
                 android:textColor="@color/text_color"
 
                 />

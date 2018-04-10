@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:AmountView="http://schemas.android.com/apk/res-auto"
+    xmlns:zhy="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@android:color/holo_green_light"
+    android:layout_height="400dp">
+
+
+
+
+    <ImageView
+        android:id="@+id/main_img"
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:scaleType="fitXY"
+        android:layout_margin="4dp"
+        android:src="@mipmap/ic_launcher"
+
+        />
+
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="长安瑞玛"
+        android:layout_toRightOf="@+id/main_img"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/black"
+        />
+
+
+    <TextView
+        android:id="@+id/tv_series_year"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="2014款 2.0 自动豪华款"
+        android:layout_toRightOf="@+id/main_img"
+        android:layout_marginLeft="5dp"
+        android:layout_below="@+id/tv_name"
+        android:layout_marginTop="3dp"
+        android:textColor="#a0a0a0"
+        />
+
+
+
+
+
+
+
+
+
+
+    <!--<TextView-->
+        <!--android:id="@+id/img_replace"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:drawableTop="@mipmap/replace"-->
+        <!--android:text="更换车型"-->
+        <!--android:textColor="@color/blue"-->
+        <!--android:padding="5dp"-->
+        <!--android:layout_margin="8dp"-->
+        <!--/>-->
+
+
+
+
+
+
+</RelativeLayout>
