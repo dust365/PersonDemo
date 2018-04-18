@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    tools:context=".activity.NotificationTestActivity">
+
+    <!-- The primary full-screen view. This can be replaced with whatever view
+         is needed to present your content, e.g. VideoView, SurfaceView,
+         TextureView, etc. -->
+    <TextView
+        android:id="@+id/tv_chat"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:gravity="center"
+        android:textColor="#33b5e5"
+        android:textStyle="bold"
+        android:text="聊天消息"
+
+        />
+
+
+    <TextView
+        android:id="@+id/tv_push"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:gravity="center"
+        android:textColor="#33b5e5"
+        android:textStyle="bold"
+        android:text="推送消息"
+
+        />
+
+
+
+
+
+</LinearLayout>

@@ -10,6 +10,7 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.ViewTreeObserver;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
 
@@ -31,8 +32,19 @@ public class ScrollShopDetialsActivity extends Activity {
 	private static final String TAG = ScrollShopDetialsActivity.class.getSimpleName();
 
 
+	int mLayoutOneHeight = -1;
+
+	int mLayoutTwoHeight = -1;
+
+	int mLayoutThreeHeight = -1;
+
+	int mLayoutFourHeight = -1;
+
+
+
 
 	private Toolbar mToolbar;
+
 	MyScrollView mScrollView;
 	LinearLayout mLLOne ;
 	LinearLayout mLLTwo ;
@@ -57,32 +69,39 @@ public class ScrollShopDetialsActivity extends Activity {
 
 
 		floatingActionButton.setOnClickListener(new View.OnClickListener() {
+
+
 			@Override
 			public void onClick(View v) {
 
-				int childCount = mScrollView.getChildCount();
+//				int childCount = mScrollView.getChildCount();
+//
+//
+//
+//
+//				for (int i = 0; i < childCount; i++) {
+//
+//					View childView = mScrollView.getChildAt(i);
+//
+//					float y = childView.getY();
+//					Log.e(TAG,"getY()==="+y);
+//
+//					int height = childView.getHeight();
+//					Log.e(TAG,"getHeight()()==="+height);
+//
+//
+//
+//
+//
+//
+//				}
+//
+//				scrollToView(mLLThree);
 
 
-
-
-				for (int i = 0; i < childCount; i++) {
-
-					View childView = mScrollView.getChildAt(i);
-
-					float y = childView.getY();
-					Log.e(TAG,"getY()==="+y);
-
-					int height = childView.getHeight();
-					Log.e(TAG,"getHeight()()==="+height);
-
-
-
-
-
-
-				}
-
-				scrollToView(mLLThree);
+				int y = mLayoutOneHeight + mLayoutTwoHeight;
+				Log.e(TAG, "onClick: y = " + y );
+				mScrollView.smoothScrollTo(0, y);
 
 
 
@@ -117,6 +136,76 @@ public class ScrollShopDetialsActivity extends Activity {
 
 		int measuredHeight = mScrollView.getMeasuredHeight();
 		Log.e(TAG,"mScrollView ----> measuredHeight="+measuredHeight);
+
+
+
+
+
+		ViewTreeObserver layoutOneVto = mLLOne.getViewTreeObserver();
+		layoutOneVto.addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
+
+			@Override
+			public void onGlobalLayout() {
+				mLLOne.getViewTreeObserver().removeOnGlobalLayoutListener(this);
+				mLayoutOneHeight = mLLOne.getHeight();
+				Log.e(TAG, "onGlobalLayout: mLayoutOneHeight = " + mLayoutOneHeight );
+
+
+			}
+		});
+
+
+
+		ViewTreeObserver layoutTwoVto = mLLTwo.getViewTreeObserver();
+		layoutTwoVto.addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
+
+			@Override
+			public void onGlobalLayout() {
+				mLLTwo.getViewTreeObserver().removeOnGlobalLayoutListener(this);
+				mLayoutTwoHeight = mLLTwo.getHeight();
+
+				Log.e(TAG, "onGlobalLayout: mLayoutTwoHeight = " + mLayoutTwoHeight );
+
+
+			}
+		});
+
+
+
+		ViewTreeObserver layoutThreeVto = mLLThree.getViewTreeObserver();
+		layoutThreeVto.addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
+
+			@Override
+			public void onGlobalLayout() {
+
+				mLLThree.getViewTreeObserver().removeOnGlobalLayoutListener(this);
+				mLayoutThreeHeight = mLLThree.getHeight();
+
+
+				Log.e(TAG, "onGlobalLayout: mLayoutThreeHeight = " + mLayoutThreeHeight );
+
+
+			}
+		});
+
+
+
+		ViewTreeObserver layoutFourVto = mLLFour.getViewTreeObserver();
+		layoutFourVto.addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
+
+			@Override
+			public void onGlobalLayout() {
+
+				mLLFour.getViewTreeObserver().removeGlobalOnLayoutListener(this);
+				mLayoutFourHeight = mLLFour.getHeight();
+
+
+				Log.e(TAG, "onGlobalLayout: mLayoutFourHeight = " + mLayoutFourHeight );
+
+			}
+		});
+
+
 
 
 

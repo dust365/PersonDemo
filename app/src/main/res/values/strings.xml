@@ -5,4 +5,23 @@
     <string name="drawer_open">打开</string>
     <string name="drawer_close">关闭</string>
 
+    <string name="title_activity_dust">DustActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+
+    <string name="title_activity_dust25">DustActivity25</string>
+
+    <string name="title_activity_dust2">DustActivity2</string>
+
+    <string name="title_activity_dust3">商品详情</string>
+
+    <string name="title_activity_dust4">DustActivity4</string>
+
+    <string name="title_activity_dust5">DustActivity5</string>
+
+    <string name="title_activity_dust6">DustActivity6</string>
+
+    <string name="title_activity_notification_test">NotificationTestActivity</string>
+
+
 </resources>

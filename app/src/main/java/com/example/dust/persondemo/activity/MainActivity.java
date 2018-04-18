@@ -1,8 +1,10 @@
 package com.example.dust.persondemo.activity;
 
 import android.Manifest;
+import android.annotation.TargetApi;
 import android.app.AlertDialog;
 import android.app.Notification;
+import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
@@ -13,7 +15,9 @@ import android.content.pm.PackageManager;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.net.Uri;
+import android.os.Build;
 import android.support.annotation.NonNull;
+import android.support.annotation.RequiresApi;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.NotificationCompat;
@@ -65,6 +69,7 @@ public class MainActivity extends AppCompatActivity {
     private boolean isDefultSkin=true;
 
 
+    @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -232,32 +237,18 @@ public class MainActivity extends AppCompatActivity {
         tv6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //跳转的activity页面
-                Intent intent = new Intent(MainActivity.this, NotificationActivity.class);
-                PendingIntent pendingIntent = PendingIntent.getActivity(MainActivity.this, 0, intent, 0);
 
 
-                NotificationManager manager= (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
 
-                Notification notification = new NotificationCompat.Builder(MainActivity.this)
-                        .setContentTitle("我是个标题")
-                        .setContentText("11112")
-                        .setWhen(System.currentTimeMillis())
-                        .setSmallIcon(R.mipmap.ic_launcher)
-                        .setLargeIcon(BitmapFactory.decodeResource(getResources(),R.mipmap.ic_launcher))
-                        .setContentIntent(pendingIntent)//intent跳转
-                        .setAutoCancel(true)//点击后是否取消
-                        .setCategory("85858588888")
-                        .setSound(Uri.fromFile(new File("/system/media/auto/ringtones/Luna.ogg")))
-                        .setVibrate(new long[]{0,1000,1000,1000})
-                        .setLights(Color.RED,1000,1000)
-                        .setDefaults(NotificationCompat.DEFAULT_ALL)
-                        .build();
-                        manager.notify(1,notification);
+                Intent intent = new Intent(MainActivity.this, NotificationTestActivity.class);
+                startActivity(intent);
 
 
             }
         });
+
+
+
 
         /**　　　design 详情页 页面　　**/
         TextView tv7 = (TextView) findViewById(R.id.sample_text7);
@@ -643,4 +634,6 @@ public class MainActivity extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
+
+
 }

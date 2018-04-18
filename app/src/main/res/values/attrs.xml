@@ -4,23 +4,16 @@
     <declare-styleable name="FromView">
 
 
-
-
-         <!--  三个控件是否显示  -->
+        <!--  三个控件是否显示  -->
         <attr name="head_button_checkable" format="boolean" />
         <attr name="body_button_checkable" format="boolean" />
         <attr name="foot_button_checkable" format="boolean" />
 
 
-         <!-- 三个控件显示文字-->
+        <!-- 三个控件显示文字-->
         <attr name="head_text" format="string" />
         <attr name="body_text" format="string" />
         <attr name="foot_text" format="string" />
-
-
-
-
-
 
 
         <attr name="title_background_color" format="reference|integer" />
@@ -37,6 +30,15 @@
         <attr name="left_button_text_color" format="color" />
         <attr name="left_button_drawable" format="reference|integer" />
 
+    </declare-styleable>
+
+    <!-- Declare custom theme attributes that allow changing which styles are
+         used for button bars depending on the API level.
+         ?android:attr/buttonBarStyle is new as of API 11 so this is
+         necessary to support previous API levels. -->
+    <declare-styleable name="ButtonBarContainerTheme">
+        <attr name="metaButtonBarStyle" format="reference" />
+        <attr name="metaButtonBarButtonStyle" format="reference" />
     </declare-styleable>
 
 </resources>

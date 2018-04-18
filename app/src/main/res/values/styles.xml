@@ -8,17 +8,28 @@
         <item name="colorAccent">@color/colorAccent</item>
 
 
-
         <!-- 返回键的颜色 -->
         <item name="colorControlNormal">@color/white</item>
 
 
-     <item name="actionMenuTextColor">@android:color/black</item>
+        <item name="actionMenuTextColor">@android:color/black</item>
 
         <!-- toolbar 文字的颜色 -->
         <!--toolbar title, menu text color-->
         <item name="android:textColorPrimary">@color/white</item>
 
+    </style>
+
+    <style name="FullscreenTheme" parent="AppTheme">
+        <item name="android:actionBarStyle">@style/FullscreenActionBarStyle</item>
+        <item name="android:windowActionBarOverlay">true</item>
+        <item name="android:windowBackground">@null</item>
+        <item name="metaButtonBarStyle">?android:attr/buttonBarStyle</item>
+        <item name="metaButtonBarButtonStyle">?android:attr/buttonBarButtonStyle</item>
+    </style>
+
+    <style name="FullscreenActionBarStyle" parent="Widget.AppCompat.ActionBar">
+        <item name="android:background">@color/black_overlay</item>
     </style>
 
 </resources>

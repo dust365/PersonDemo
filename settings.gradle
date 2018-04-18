@@ -1,4 +1,6 @@
-include ':app', ':speechDemo'
+include ':app'
+
+// include  ':speechDemo'
 
 include    ':PathView'
 

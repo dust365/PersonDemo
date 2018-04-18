@@ -6,54 +6,35 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.CAMERA" />
 
+    <!-- 微信相关权限   start -->
 
-
-
-
-  <!--    微信相关权限   start  -->
-
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
-    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-
-    <!--    微信相关权限   end -->
-
-
-    <!-- 卸载 安装权限-->
-    <uses-permission android:name="android.permission.DELETE_PACKAGES"/>
-    <uses-permission android:name="android.permission.INSTALL_PACKAGES"/>
-
-
-   <!--  热修复相关    网络权限-->
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-    <!--  外部存储读权限，调试工具加载本地补丁需要   -->
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <!-- 微信相关权限   end -->
 
 
+    <!-- 卸载 安装权限 -->
+    <uses-permission android:name="android.permission.DELETE_PACKAGES" />
+    <uses-permission android:name="android.permission.INSTALL_PACKAGES" />
 
-
-
-
+    <!-- 热修复相关    网络权限 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 外部存储读权限，调试工具加载本地补丁需要 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
-
         android:name=".app.App"
         android:allowBackup="true"
         android:icon="@drawable/ic_icon"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
-
-
-
-
-
-
         <meta-data
             android:name="com.taobao.android.hotfix.IDSECRET"
             android:value="24596899-1" />
@@ -64,17 +45,6 @@
             android:name="com.taobao.android.hotfix.RSASECRET"
             android:value="MIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCSVv9on7vqMN2retrMp00gFNykivFzWQig9eCg0ERLQxKWsvbO8ljrtmG3QR4KXQtYQf65OXNye97Trijg4yLV31wZuSJOPpKbTs8lY1ETIy3Prp/E6r7sIz2fCZ85C8jYc/5mkUOaXYi1DcJR4XU/Z963eTJJ66WhrprWYm4jVdOTiwAsWGWuRgsf6jAQHlMzQR/V337cKQVAMrLLFX0hkrs8q0pTLiVxE1e9BtVV7j3n3SXniJJ2cmCOAjnkwrCnuuBepTHcDvanmdOJc40dIubCAUkPPvOodlpqIL+mpEPql7kP5/629kVrkyLv3Lrq3TvykH0xk/1KPio1VJ07AgMBAAECggEBAIk2vaFSNRav3wmM1l+Sd0SfiwtVpHPthaO3KHphDcgsCd/3ymfc4PeTOShlDE/XUm3c44S1k8RC1XpSEM5c6yrylh8gckQ/c6PgT2bVKw3wrGHRcMlo+r/bg0n98afBnv8mM+HkTykMjsSFNDEmX5OmRzRtlXOuWs2xNEnUXUUPJymmzBbU4Nnkv4w6dWC7qo/DdutBUiKgv89CfTGm18c9oDpJHYUNd+4MGYE2JdlihJ5miSBxFTkbmrivoPf1sAAfF4H96bq1XfxRNdDrgpcxAFqdUeK362FvaUJ0trddHxshsdGMrFfaweE06uWR4ISGlZDrqzOhERLQqHE47eECgYEAzBra2pQ+hF8wipBHhHZbu0j1GOCO9YK6KaBrI6qurvEJ8PWvz/of7V0X3sLzg5i6U+bj+eHOB3gxbGB2iiM1XL1aXKg1zlPbDhH6wtqvPQoVgb19cJp01YHnEBew8w26UDx5kldDLzsoDQ51GGayVpwaXEaqbjmInnlus+1YVDMCgYEAt4w6CsquNRErtZCm40/EkA1dvPV/NNrf/Nf8XYJRnp0YGjTQIsLtBTaeQ70HTNeBXBs9PwYHG1xNOB2a6RcRmR0H58zXmzhrZYg38rQkzrWPl4taTvycIhgmg0esAnAwFqgfri1n9ERgbCfMNl5JOENd6AwT7w90xnlq20PnytkCgYAF2UcoOFNKS8gCUHwcKaAbT83mNpkiI+rdwoEPdpam4LVeOEwfc5VyodZLRd7giIHeYaFqybOztxgDeQgskTG4RJzQRumzzedbEdzTtJyM7TsMireLgIGUlLJgXa1uaZhLMFBzhxifw9wz85QbbOXzYWnH9yZvHiryD5zCfyymzQKBgGyXLLu3v6srtnVb2DCBv+QN1Fh30cN+fqgDTI4yDIHPpTPT7ROzyTCdaLLgwdHnaeQJRYnk0g2Q5Sp+8WhXupSghU3RdfmiPn+6QId5ppEY/5QD4PD8KI9PRHHE1HI412qAGwYcXPU6AuXaAcpkq+L6kDM5+g0kUs0dhmek3By5AoGBAIsB09AhZcy/wAFrdTSy3Z2iapoWphHh7DwqYvqi5zSTUSNsqfAaHtnLJYVEEWR+DEuDRmWU/2+liTPQiXcP5ssSKm31Crf0Kz0AUn+MPgYSgRyY8TUxkWg6WnNDZyUFTmO6sJiQPv94ZutW0tcvs4wMlUENBxK9QvWjcWTlkPYc" />
 
-
-
-
-
-
-
-
-
-
-
-
         <activity android:name=".activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -82,54 +52,33 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity android:name=".activity.NotificationActivity" />
-
         <activity android:name=".activity.MediaPlayerActivity" />
-
         <activity android:name=".activity.DesignDetialActivity" />
+        <activity android:name=".activity.BezierCurveActivity" />
+        <activity android:name=".activity.RcycleViewActivity" />
 
+        <!-- 侧滑删除 -->
+        <activity android:name=".activity.SlidingActivity" />
 
-        <activity android:name=".activity.BezierCurveActivity"/>
-
-        <activity android:name=".activity.RcycleViewActivity"/>
-
-
-
-       <!-- 侧滑删除 -->
-        <activity android:name=".activity.SlidingActivity"/>
-
-
-
-
-       <!-- 绘制 -->
-        <activity android:name=".activity.PaintActivity"/>
-
-
-
-
+        <!-- 绘制 -->
+        <activity android:name=".activity.PaintActivity" />
 
         <!-- 自定义控件 -->
         <activity android:name=".activity.CustomActivity">
+            <intent-filter>
+                <action android:name="com.example.dust.persondemo" />
 
-            <intent-filter >
-
-                <action android:name="com.example.dust.persondemo"/>
-                <category  android:name="android.intent.category.DEFAULT"/>
-
-
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
-
         </activity>
 
-
         <!-- 语音是别的弹窗 -->
-        <activity android:name=".activity.VoiceDialogActivity"/>
+        <activity android:name=".activity.VoiceDialogActivity" />
         <activity android:name=".activity.SensorActivity" />
         <activity android:name=".activity.SlidingShopDetialsActivity" />
         <activity android:name=".activity.ScrollShopDetialsActivity" />
-
-
+        <activity android:name=".activity.NotificationTestActivity"></activity>
     </application>
 
 </manifest>
