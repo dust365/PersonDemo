@@ -83,7 +83,7 @@ dependencies {
     //阿里热修复shophix
     compile 'com.aliyun.ams:alicloud-android-hotfix:3.1.0'
 
-    //lottile
+    //lottil
     compile 'com.airbnb.android:lottie:2.5.0-beta1'
 
     //使用RxJava2

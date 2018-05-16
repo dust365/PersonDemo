@@ -16,6 +16,7 @@ import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.net.Uri;
 import android.os.Build;
+import android.os.Message;
 import android.support.annotation.NonNull;
 import android.support.annotation.RequiresApi;
 import android.support.design.widget.FloatingActionButton;
@@ -33,6 +34,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.dust.persondemo.R;
+import com.example.dust.persondemo.dialog.VoiceDialog;
 import com.example.dust.persondemo.factory.BlackHuman;
 import com.example.dust.persondemo.factory.Human;
 import com.example.dust.persondemo.factory.HumanFactory;
@@ -358,7 +360,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-        /**    自定义控件语音识别的弹窗  16  **/
+        /**    权限和 16  **/
         TextView sample_text16 = (TextView) findViewById(R.id.sample_text16);
         sample_text16.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -469,6 +471,23 @@ public class MainActivity extends AppCompatActivity {
 
                 Intent intent = new Intent(MainActivity.this, ScrollShopDetialsActivity.class);
                 startActivity(intent);
+
+
+            }
+        });
+
+
+        final VoiceDialog voiceDialog=new VoiceDialog(MainActivity.this);
+
+       /** Dialog 生命周期   **/
+        TextView sample_text20 = (TextView) findViewById(R.id.sample_text20);
+        sample_text20.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                voiceDialog.setMessage("确定退出应用");
+//                voiceDialog.setMessage("确定退出应用?");
+                voiceDialog.show();
 
 
             }

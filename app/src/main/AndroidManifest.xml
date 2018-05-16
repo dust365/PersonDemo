@@ -78,7 +78,20 @@
         <activity android:name=".activity.SensorActivity" />
         <activity android:name=".activity.SlidingShopDetialsActivity" />
         <activity android:name=".activity.ScrollShopDetialsActivity" />
-        <activity android:name=".activity.NotificationTestActivity"></activity>
+        <activity android:name=".activity.NotificationTestActivity" />
+
+
+
+        <!--桌面组件相关-->
+        <receiver android:name=".widget.NewAppWidget">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/new_app_widget_info" />
+        </receiver>
     </application>
 
 </manifest>

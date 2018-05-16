@@ -209,7 +209,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:padding="5dp"
-                android:text="Rxpermissions和其他"
+                android:text="Rxpermissions和日期选择"
                 android:textColor="@color/text_color"
 
                 />
@@ -251,6 +251,19 @@
                 android:textColor="@color/text_color"
 
                 />
+
+
+            <TextView
+                android:id="@+id/sample_text20"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="Dialog 生命周期"
+                android:textColor="@color/text_color"
+
+                />
+
 
 
 

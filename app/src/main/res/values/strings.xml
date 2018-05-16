@@ -22,6 +22,8 @@
     <string name="title_activity_dust6">DustActivity6</string>
 
     <string name="title_activity_notification_test">NotificationTestActivity</string>
+    <string name="appwidget_text">我是一个桌面组件</string>
+    <string name="add_widget">Add widget</string>
 
 
 </resources>
