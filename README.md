@@ -55,6 +55,7 @@
  
  * 11.android 8.0通知适配 不做是配的话你的通知是不会出现的  ()
   核心代码如下：
+  
    ```
      String channelId = "chat";
             String channelName = "聊天消息";
