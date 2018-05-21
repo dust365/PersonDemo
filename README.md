@@ -53,7 +53,42 @@
                         
  ```
  
- * 11.android 8.0通知适配 不做是配的话你的通知是不会出现的  
+ * 11.android 8.0通知适配 不做是配的话你的通知是不会出现的  ()
+  核心代码如下：
+   ```
+     String channelId = "chat";
+            String channelName = "聊天消息";
+
+            //重要等级
+            int importance = NotificationManager.IMPORTANCE_HIGH;
+            createNotificationChannel(channelId, channelName, importance);
+
+
+
+            channelId = "push";
+            channelName = "推送消息";
+            importance = NotificationManager.IMPORTANCE_DEFAULT;
+            createNotificationChannel(channelId, channelName, importance);
+  ```
+
+12.自定义 CoordinatorLayout   Behavior行为  实现各种炫酷行为
+  ```
+    <TextView
+        android:id="@+id/xuanfu_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="悬浮按钮"
+        android:textColor="#ff33ff"
+        app:layout_behavior="com.example.dust.persondemo.behavior.MyBehavior"
+        app:layout_anchor="@id/appBar"
+        app:layout_anchorGravity="start|bottom"
+        />
+
+  ```
+  
+ 
+ 
 ~~过时的方法~~
 
  
