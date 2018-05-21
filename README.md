@@ -27,7 +27,7 @@
  
  * 9 夜间模式 
  
-  ![image](https://github.com/dust365/PersonDemo/blob/master/app/src/main/res/raw/nightGIF.gif)
+  ![image](https://github.com/dust365/PersonDemo/blob/master/app/src/main/res/raw/nightgif.gif)
 
  
  * 10.RxJava RxPermissions动态申请权限解决权限回调分割代码业务的问题
@@ -53,7 +53,7 @@
                         
  ```
  
- * 11.android 8.0通知适配 不做是配的话你的通知是不会出现的  ()
+  * 11.android 8.0通知适配 不做是配的话你的通知是不会出现的  
   核心代码如下：
   
    ```
@@ -73,8 +73,9 @@
   ```
 
 * 12.自定义 CoordinatorLayout   Behavior行为  实现各种炫酷行为
-![image](https://github.com/dust365/PersonDemo/blob/master/app/src/main/res/raw/my_behavior.gif)
- ![image](https://github.com/dust365/PersonDemo/blob/master/app/src/main/res/raw/map.gif)
+
+  ![image](https://github.com/dust365/PersonDemo/blob/master/app/src/main/res/raw/my_behavior.gif)
+
 
   ```
     <TextView
