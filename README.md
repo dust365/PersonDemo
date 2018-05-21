@@ -56,7 +56,7 @@
   * 11.android 8.0通知适配 不做是配的话你的通知是不会出现的  
   核心代码如下：
   
-   ```
+ ```
      String channelId = "chat";
             String channelName = "聊天消息";
 
@@ -70,14 +70,15 @@
             channelName = "推送消息";
             importance = NotificationManager.IMPORTANCE_DEFAULT;
             createNotificationChannel(channelId, channelName, importance);
-  ```
+            
+```
 
 * 12.自定义 CoordinatorLayout   Behavior行为  实现各种炫酷行为
 
   ![image](https://github.com/dust365/PersonDemo/blob/master/app/src/main/res/raw/my_behavior.gif)
 
 
-  ```
+```
     <TextView
         android:id="@+id/xuanfu_tv"
         android:layout_width="wrap_content"
@@ -90,7 +91,7 @@
         app:layout_anchorGravity="start|bottom"
         />
 
-  ```
+```
   
  
  
