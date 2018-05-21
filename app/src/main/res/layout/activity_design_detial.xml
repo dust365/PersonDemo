@@ -41,6 +41,7 @@
 
 
     <android.support.v4.widget.NestedScrollView
+        android:id="@+id/netscroll"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
@@ -66,7 +67,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="85285298555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555"
+                android:text="8528529855555555555"
                 />
 
         </LinearLayout>
@@ -82,6 +83,22 @@
         app:layout_anchor="@id/appBar"
         android:layout_margin="5dp"
         />
+
+
+    <TextView
+        android:id="@+id/xuanfu_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="悬浮按钮"
+        android:textColor="#ff33ff"
+        app:layout_behavior="com.example.dust.persondemo.behavior.MyBehavior"
+        app:layout_anchor="@id/appBar"
+        app:layout_anchorGravity="start|bottom"
+        />
+
+
+
 
 
 </android.support.design.widget.CoordinatorLayout>
