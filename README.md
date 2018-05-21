@@ -72,7 +72,9 @@
             createNotificationChannel(channelId, channelName, importance);
   ```
 
-12.自定义 CoordinatorLayout   Behavior行为  实现各种炫酷行为
+* 12.自定义 CoordinatorLayout   Behavior行为  实现各种炫酷行为
+![image](https://github.com/dust365/PersonDemo/blob/master/app/src/main/res/raw/my_behavior.gif)
+
   ```
     <TextView
         android:id="@+id/xuanfu_tv"
