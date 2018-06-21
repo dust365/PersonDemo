@@ -79,7 +79,7 @@
         <activity android:name=".activity.SlidingShopDetialsActivity" />
         <activity android:name=".activity.ScrollShopDetialsActivity" />
         <activity android:name=".activity.NotificationTestActivity" />
-
+        <activity android:name=".activity.SecondActivity" />
 
 
         <!--桌面组件相关-->

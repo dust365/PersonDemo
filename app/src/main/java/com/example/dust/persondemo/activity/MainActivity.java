@@ -34,6 +34,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.dust.persondemo.R;
+import com.example.dust.persondemo.bean.Person;
 import com.example.dust.persondemo.dialog.VoiceDialog;
 import com.example.dust.persondemo.factory.BlackHuman;
 import com.example.dust.persondemo.factory.Human;
@@ -515,6 +516,12 @@ public class MainActivity extends AppCompatActivity {
 
 
 //
+
+
+        Person p=   new Person.Builder()
+                .name("fasf")
+                .setCountry(1)
+                .create();
 
 
 

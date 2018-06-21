@@ -1,11 +1,13 @@
 package com.example.dust.persondemo.activity;
 
+import android.content.Intent;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.MenuItem;
+import android.view.View;
 
 import com.example.dust.persondemo.R;
 
@@ -41,6 +43,70 @@ public class DesignDetialActivity extends AppCompatActivity {
 
 
              testRxjava();
+
+
+
+
+        findViewById(R.id.tv_1).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(DesignDetialActivity.this, SecondActivity.class);
+                intent.putExtra(SecondActivity.STATE_TYPE,"1");
+                startActivity(intent);
+
+
+
+            }
+        });
+
+        findViewById(R.id.tv_2).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+                Intent intent = new Intent(DesignDetialActivity.this, SecondActivity.class);
+                intent.putExtra(SecondActivity.STATE_TYPE,"2");
+                startActivity(intent);
+
+            }
+        });
+
+        findViewById(R.id.tv_3).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(DesignDetialActivity.this, SecondActivity.class);
+                intent.putExtra(SecondActivity.STATE_TYPE,"3");
+                startActivity(intent);
+
+
+            }
+        });
+
+        findViewById(R.id.tv_4).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(DesignDetialActivity.this, SecondActivity.class);
+                intent.putExtra(SecondActivity.STATE_TYPE,"4");
+                startActivity(intent);
+
+
+
+            }
+        });
+        findViewById(R.id.tv_5).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(DesignDetialActivity.this, SecondActivity.class);
+                intent.putExtra(SecondActivity.STATE_TYPE,"5");
+                startActivity(intent);
+
+
+            }
+        });
 
 
 
