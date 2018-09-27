@@ -1,12 +1,10 @@
 package com.example.dust.persondemo.adapter;
 
 import android.content.Context;
-import android.content.pm.ActivityInfo;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageInfo;
 import android.graphics.drawable.Drawable;
 import android.support.v7.widget.RecyclerView;
-import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -23,16 +21,16 @@ import butterknife.ButterKnife;
 
 /**
  * @author dust
- * @function 安装包列表
+ * @function 翻页效果的adapter
  * @created at 2017/9/9
  */
-public class InstallPackageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> implements View.OnClickListener {
+public class ThreeDPackageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> implements View.OnClickListener {
     private Context mContext;
     private List<PackageInfo> mList;
     private MyItemClickListener mItemClickListener;
 
 
-    public InstallPackageAdapter(Context mContext, List<PackageInfo> mList) {
+    public ThreeDPackageAdapter(Context mContext, List<PackageInfo> mList) {
 
         this.mList = mList;
         this.mContext = mContext;
@@ -42,7 +40,7 @@ public class InstallPackageAdapter extends RecyclerView.Adapter<RecyclerView.Vie
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
 
-        View itemView = LayoutInflater.from(mContext).inflate(R.layout.install_package_item, parent, false);
+        View itemView = LayoutInflater.from(mContext).inflate(R.layout.package_item_3d, parent, false);
         TopViewHolder holder = new TopViewHolder(itemView);
         //设置item点击事件
         itemView.setOnClickListener(this);
@@ -68,10 +66,6 @@ public class InstallPackageAdapter extends RecyclerView.Adapter<RecyclerView.Vie
 
 
         Drawable logoDrawable = packageInfo.applicationInfo.loadIcon(mContext.getPackageManager());
-
-
-
-
 
 
 //        ActivityInfo[] activities = packageInfo.activities;

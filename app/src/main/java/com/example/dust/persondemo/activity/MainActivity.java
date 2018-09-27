@@ -1,27 +1,17 @@
 package com.example.dust.persondemo.activity;
 
 import android.Manifest;
-import android.annotation.TargetApi;
 import android.app.AlertDialog;
-import android.app.Notification;
-import android.app.NotificationChannel;
-import android.app.NotificationManager;
-import android.app.PendingIntent;
+import android.content.ComponentName;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
-import android.graphics.BitmapFactory;
-import android.graphics.Color;
-import android.net.Uri;
 import android.os.Build;
-import android.os.Message;
 import android.support.annotation.NonNull;
 import android.support.annotation.RequiresApi;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
-import android.support.v4.app.NotificationCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
@@ -34,35 +24,29 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.dust.persondemo.R;
-import com.example.dust.persondemo.bean.Person;
+import com.example.dust.persondemo.bean.PersonBuild;
 import com.example.dust.persondemo.dialog.VoiceDialog;
 import com.example.dust.persondemo.factory.BlackHuman;
 import com.example.dust.persondemo.factory.Human;
 import com.example.dust.persondemo.factory.HumanFactory;
 import com.example.dust.persondemo.factory.WhiteHuman;
 import com.example.dust.persondemo.factory.YellowHuman;
+import com.example.dust.persondemo.services.MyService;
 import com.example.dust.persondemo.utils.CircularAnimUtil;
 import com.example.dust.persondemo.utils.JNIUtils;
-import com.tbruyelle.rxpermissions2.Permission;
 import com.tbruyelle.rxpermissions2.RxPermissions;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
-import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
-import java.util.List;
-import java.util.logging.Logger;
 
 import io.reactivex.functions.Consumer;
 import skin.support.SkinCompatManager;
-
-import static com.tencent.bugly.crashreport.crash.c.i;
-import static java.security.AccessController.getContext;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -70,6 +54,10 @@ public class MainActivity extends AppCompatActivity {
     private DrawerLayout mDrawerLayout;
     private ActionBarDrawerToggle mDrawerToggle;
     private boolean isDefultSkin=true;
+    private ComponentName mDefault;
+    private ComponentName mDouble11;
+    private ComponentName mDouble12;
+    private PackageManager mPm;
 
 
     @RequiresApi(api = Build.VERSION_CODES.O)
@@ -496,6 +484,48 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+         /** 3D画廊  **/
+        TextView sample_text21 = (TextView) findViewById(R.id.sample_text21);
+        sample_text21.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+                Intent intent = new Intent(MainActivity.this, ThreeDRcycleViewActivity.class);
+                startActivity(intent);
+
+                changeIcon12(v);
+
+            }
+        });
+
+
+        mDefault = getComponentName();
+        mDouble11 = new ComponentName(getBaseContext(), "com.example.dust.persondemo.Test11");
+        mDouble12 = new ComponentName(getBaseContext(), "com.example.dust.persondemo.Test12");
+        mPm = getApplicationContext().getPackageManager();
+
+
+
+        /** 更换启动图标  加入安装有问题  cmd  命令行 adb uninstall com.example.dust.persondemo  **/
+        TextView sample_text22 = (TextView) findViewById(R.id.sample_text22);
+        sample_text22.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+
+                changeIcon11(v);
+                changeIcon12(v);
+
+
+            }
+        });
+
+
+
+
+
 
 
 
@@ -518,17 +548,42 @@ public class MainActivity extends AppCompatActivity {
 //
 
 
-        Person p=   new Person.Builder()
+        PersonBuild p=   new PersonBuild.Builder()
                 .name("fasf")
                 .setCountry(1)
                 .create();
 
 
+//        MyService myService = new MyService();
 
-
+        Intent intent = new Intent(getApplicationContext(), MyService.class);
+        this.startService(intent);
 
 
     }
+
+
+    public void changeIcon11(View view) {
+        disableComponent(mDefault);
+//        disableComponent(mDouble12);
+        enableComponent(mDouble11);
+    }
+
+    public void changeIcon12(View view) {
+        disableComponent(mDefault);
+        disableComponent(mDouble11);
+        enableComponent(mDouble12);
+    }
+
+    private void enableComponent(ComponentName componentName) {
+        mPm.setComponentEnabledSetting(componentName, PackageManager.COMPONENT_ENABLED_STATE_ENABLED, PackageManager.DONT_KILL_APP);
+    }
+
+    private void disableComponent(ComponentName componentName) {
+        mPm.setComponentEnabledSetting(componentName, PackageManager.COMPONENT_ENABLED_STATE_DISABLED, PackageManager.DONT_KILL_APP);
+    }
+
+
 
     private void initNavigationView() {
 

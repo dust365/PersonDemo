@@ -45,6 +45,9 @@
             android:name="com.taobao.android.hotfix.RSASECRET"
             android:value="MIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCSVv9on7vqMN2retrMp00gFNykivFzWQig9eCg0ERLQxKWsvbO8ljrtmG3QR4KXQtYQf65OXNye97Trijg4yLV31wZuSJOPpKbTs8lY1ETIy3Prp/E6r7sIz2fCZ85C8jYc/5mkUOaXYi1DcJR4XU/Z963eTJJ66WhrprWYm4jVdOTiwAsWGWuRgsf6jAQHlMzQR/V337cKQVAMrLLFX0hkrs8q0pTLiVxE1e9BtVV7j3n3SXniJJ2cmCOAjnkwrCnuuBepTHcDvanmdOJc40dIubCAUkPPvOodlpqIL+mpEPql7kP5/629kVrkyLv3Lrq3TvykH0xk/1KPio1VJ07AgMBAAECggEBAIk2vaFSNRav3wmM1l+Sd0SfiwtVpHPthaO3KHphDcgsCd/3ymfc4PeTOShlDE/XUm3c44S1k8RC1XpSEM5c6yrylh8gckQ/c6PgT2bVKw3wrGHRcMlo+r/bg0n98afBnv8mM+HkTykMjsSFNDEmX5OmRzRtlXOuWs2xNEnUXUUPJymmzBbU4Nnkv4w6dWC7qo/DdutBUiKgv89CfTGm18c9oDpJHYUNd+4MGYE2JdlihJ5miSBxFTkbmrivoPf1sAAfF4H96bq1XfxRNdDrgpcxAFqdUeK362FvaUJ0trddHxshsdGMrFfaweE06uWR4ISGlZDrqzOhERLQqHE47eECgYEAzBra2pQ+hF8wipBHhHZbu0j1GOCO9YK6KaBrI6qurvEJ8PWvz/of7V0X3sLzg5i6U+bj+eHOB3gxbGB2iiM1XL1aXKg1zlPbDhH6wtqvPQoVgb19cJp01YHnEBew8w26UDx5kldDLzsoDQ51GGayVpwaXEaqbjmInnlus+1YVDMCgYEAt4w6CsquNRErtZCm40/EkA1dvPV/NNrf/Nf8XYJRnp0YGjTQIsLtBTaeQ70HTNeBXBs9PwYHG1xNOB2a6RcRmR0H58zXmzhrZYg38rQkzrWPl4taTvycIhgmg0esAnAwFqgfri1n9ERgbCfMNl5JOENd6AwT7w90xnlq20PnytkCgYAF2UcoOFNKS8gCUHwcKaAbT83mNpkiI+rdwoEPdpam4LVeOEwfc5VyodZLRd7giIHeYaFqybOztxgDeQgskTG4RJzQRumzzedbEdzTtJyM7TsMireLgIGUlLJgXa1uaZhLMFBzhxifw9wz85QbbOXzYWnH9yZvHiryD5zCfyymzQKBgGyXLLu3v6srtnVb2DCBv+QN1Fh30cN+fqgDTI4yDIHPpTPT7ROzyTCdaLLgwdHnaeQJRYnk0g2Q5Sp+8WhXupSghU3RdfmiPn+6QId5ppEY/5QD4PD8KI9PRHHE1HI412qAGwYcXPU6AuXaAcpkq+L6kDM5+g0kUs0dhmek3By5AoGBAIsB09AhZcy/wAFrdTSy3Z2iapoWphHh7DwqYvqi5zSTUSNsqfAaHtnLJYVEEWR+DEuDRmWU/2+liTPQiXcP5ssSKm31Crf0Kz0AUn+MPgYSgRyY8TUxkWg6WnNDZyUFTmO6sJiQPv94ZutW0tcvs4wMlUENBxK9QvWjcWTlkPYc" />
 
+
+
+
         <activity android:name=".activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -52,6 +55,43 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity-alias
+            android:name=".Test11"
+            android:enabled="false"
+            android:icon="@drawable/ic_launcher"
+            android:label="@string/app_name"
+            android:targetActivity=".activity.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity-alias>
+
+
+      <activity-alias
+            android:name=".Test12"
+            android:enabled="false"
+            android:icon="@drawable/xyjy2"
+            android:label="@string/app_name"
+            android:targetActivity=".activity.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity-alias>
+
+
+
+
+
+
+
+
+
+
         <activity android:name=".activity.NotificationActivity" />
         <activity android:name=".activity.MediaPlayerActivity" />
         <activity android:name=".activity.DesignDetialActivity" />
@@ -80,6 +120,7 @@
         <activity android:name=".activity.ScrollShopDetialsActivity" />
         <activity android:name=".activity.NotificationTestActivity" />
         <activity android:name=".activity.SecondActivity" />
+        <activity android:name=".activity.ThreeDRcycleViewActivity" />
 
 
         <!--桌面组件相关-->
@@ -92,6 +133,21 @@
                 android:name="android.appwidget.provider"
                 android:resource="@xml/new_app_widget_info" />
         </receiver>
+        <service android:name=".services.MyService"
+
+
+            >
+           <intent-filter>
+            <action android:name="com.example.dust.persondemo.service" />
+           </intent-filter>
+        </service>
+
+
+
+       <!-- android:enabled="true"
+        android:exported="true"
+        android:process="com.fingerth.able.service"-->
+
     </application>
 
 </manifest>

@@ -19,6 +19,6 @@
         android:layout_height="wrap_content"
         android:textSize="30sp"
         android:textColor="#666666"
-        android:text="欢迎同学们来到动脑学院高级UIadfsasfasdafsdfasdfadsf"/>
+        android:text="欢迎同学们来到高级UIadfsasfasdafsdfasdfadsf"/>
 
 </android.support.constraint.ConstraintLayout>

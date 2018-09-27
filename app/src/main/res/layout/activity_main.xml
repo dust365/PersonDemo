@@ -266,6 +266,31 @@
 
 
 
+            <TextView
+                android:id="@+id/sample_text21"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="recycleView3D翻页效果"
+                android:textColor="@color/text_color"
+
+                />
+
+
+
+            <TextView
+                android:id="@+id/sample_text22"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="更换启动图标"
+                android:textColor="@color/text_color"
+
+                />
+
+
 
         </android.support.v7.widget.LinearLayoutCompat>
         </LinearLayout>
