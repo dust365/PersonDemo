@@ -1,6 +1,5 @@
 package com.example.dust.persondemo.activity;
 
-import android.annotation.SuppressLint;
 import android.app.Notification;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
@@ -11,15 +10,13 @@ import android.graphics.Color;
 import android.net.Uri;
 import android.os.Build;
 import android.provider.Settings;
-import android.support.annotation.RequiresApi;
-import android.support.v4.app.NotificationCompat;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.AppCompatActivity;
+//import android.support.annotation.RequiresApi;
+import androidx.annotation.RequiresApi;
+import androidx.core.app.NotificationCompat;
+//import android.support.v7.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.MotionEvent;
 import android.view.View;
-import android.view.MenuItem;
-import android.support.v4.app.NavUtils;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -31,7 +28,7 @@ import java.io.File;
  * An example full-screen activity that shows and hides the system UI (i.e.
  * status bar and navigation/system bar) with user interaction.
  */
-public class NotificationTestActivity extends android.support.v7.app.AppCompatActivity {
+public class NotificationTestActivity extends androidx.appcompat.app.AppCompatActivity {
 
 
 

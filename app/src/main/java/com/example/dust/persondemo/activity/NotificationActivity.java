@@ -1,6 +1,6 @@
 package com.example.dust.persondemo.activity;
 
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.example.dust.persondemo.R;

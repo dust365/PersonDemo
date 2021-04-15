@@ -6,12 +6,17 @@ import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.DefaultItemAnimator;
-import android.support.v7.widget.DividerItemDecoration;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.Toolbar;
+
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
+//import androidx.recyclerview.widget.DefaultItemAnimator;
+//import androidx.recyclerview.widget.DividerItemDecoration;
+//import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.DefaultItemAnimator;
+import androidx.recyclerview.widget.DividerItemDecoration;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.appcompat.widget.Toolbar;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
@@ -55,7 +60,7 @@ public class ThreeDRcycleViewActivity extends AppCompatActivity {
 
         setSupportActionBar(toolbar3);
 
-        android.support.v7.app.ActionBar actionBar = getSupportActionBar();
+       ActionBar actionBar = getSupportActionBar();
         if (actionBar != null) {
 
             actionBar.setDisplayHomeAsUpEnabled(true);

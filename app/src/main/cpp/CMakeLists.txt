@@ -2,7 +2,7 @@
 # library. You should either keep the default value or only pass a
 # value of 3.4.0 or lower.
 
-cmake_minimum_required(VERSION 3.4.1)
+cmake_minimum_required(VERSION 3.10.2)
 
 # Creates and names a library, sets it as either STATIC
 # or SHARED, and provides the relative paths to its source code.
@@ -21,8 +21,11 @@ add_library( # Sets the name of the library.
              # Associated headers in the same location as their source
              # file are automatically included.
              #指定要编译文件路径
+             native-lib.cpp
+            native-lib.cpp ../jni/getNameJNI.c
+        )
              # src/main/cpp/native-lib.cpp )
-             src/main/cpp/native-lib.cpp src/main/jni/getNameJNI.c )
+#        native-lib.cpp ../jni/getNameJNI.c)
 
 # Searches for a specified prebuilt library and stores the path as a
 # variable. Because system libraries are included in the search path by

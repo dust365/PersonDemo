@@ -2,7 +2,9 @@ package com.example.dust.persondemo.app;
 
 import android.app.Application;
 import android.content.Context;
-import android.support.v7.app.AppCompatDelegate;
+//import android.support.v7.app.AppCompatDelegate;
+
+import androidx.appcompat.app.AppCompatDelegate;
 
 import com.example.dust.persondemo.R;
 import com.example.dust.persondemo.utils.AppInfo;

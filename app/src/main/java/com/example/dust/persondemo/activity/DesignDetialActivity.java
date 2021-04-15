@@ -1,15 +1,17 @@
 package com.example.dust.persondemo.activity;
 
 import android.content.Intent;
-import android.support.design.widget.CollapsingToolbarLayout;
-import android.support.v7.app.AppCompatActivity;
+//import android.support.design.widget.CollapsingToolbarLayout;
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.Toolbar;
+import androidx.appcompat.widget.Toolbar;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 
 import com.example.dust.persondemo.R;
+import com.google.android.material.appbar.CollapsingToolbarLayout;
 
 import io.reactivex.Observable;
 import io.reactivex.ObservableEmitter;
@@ -32,7 +34,7 @@ public class DesignDetialActivity extends AppCompatActivity {
 
         setSupportActionBar(toolbar);
 
-        android.support.v7.app.ActionBar actionBar = getSupportActionBar();
+        ActionBar actionBar = getSupportActionBar();
         if(actionBar!=null) {
 
             actionBar.setDisplayHomeAsUpEnabled(true);

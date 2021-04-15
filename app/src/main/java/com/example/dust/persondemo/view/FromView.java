@@ -4,8 +4,9 @@ package com.example.dust.persondemo.view;
 
 import android.content.Context;
 import android.content.res.TypedArray;
-import android.support.annotation.Nullable;
-import android.support.v7.widget.AppCompatCheckedTextView;
+import androidx.annotation.Nullable;
+import androidx.appcompat.widget.AppCompatCheckedTextView;
+//import android.support.v7.widget.AppCompatCheckedTextView;
 import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;

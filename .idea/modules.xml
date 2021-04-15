@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/PathView/PathView.iml" filepath="$PROJECT_DIR$/PathView/PathView.iml" />
-      <module fileurl="file://$PROJECT_DIR$/PersonDemo.iml" filepath="$PROJECT_DIR$/PersonDemo.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/PersonDemo-master.iml" filepath="$PROJECT_DIR$/.idea/PersonDemo-master.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/PathView/PersonDemo-master.PathView.iml" filepath="$PROJECT_DIR$/.idea/modules/PathView/PersonDemo-master.PathView.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/PersonDemo-master.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/PersonDemo-master.app.iml" />
     </modules>
   </component>
 </project>

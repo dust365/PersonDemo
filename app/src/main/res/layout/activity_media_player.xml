@@ -8,13 +8,13 @@
     tools:context="com.example.dust.persondemo.activity.MediaPlayerActivity">
 
 
-   <android.support.v7.widget.Toolbar
+   <androidx.appcompat.widget.Toolbar
        android:layout_width="wrap_content"
        android:layout_height="35dp"
        app:title="播放器测试"
        >
 
-   </android.support.v7.widget.Toolbar>
+   </androidx.appcompat.widget.Toolbar>
 
 
     <LinearLayout

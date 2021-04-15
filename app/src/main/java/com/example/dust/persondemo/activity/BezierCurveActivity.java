@@ -1,10 +1,14 @@
 package com.example.dust.persondemo.activity;
 
-import android.support.v7.app.AppCompatActivity;
+//import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.Toolbar;
+//import androidx.appcompat.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
+
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import com.example.dust.persondemo.R;
 import com.example.dust.persondemo.bezier.LoveLayout;
@@ -24,7 +28,7 @@ public class BezierCurveActivity extends AppCompatActivity {
 
         setSupportActionBar(toolbar3);
 
-        android.support.v7.app.ActionBar actionBar = getSupportActionBar();
+       ActionBar actionBar = getSupportActionBar();
         if(actionBar!=null) {
 
             actionBar.setDisplayHomeAsUpEnabled(true);

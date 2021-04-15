@@ -19,7 +19,7 @@
 
 package com.example.dust.persondemo.bean;
 
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 public class PieData {
     // 用户关心数据

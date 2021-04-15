@@ -1,6 +1,3 @@
 include ':app'
-
-// include  ':speechDemo'
-
-include    ':PathView'
+include ':PathView'
 
